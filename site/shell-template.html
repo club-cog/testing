@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Cognition</title>
+<style>
+@font-face {
+  font-family: "NB International Pro";
+  src: url("assets/nb-international-pro-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "STK Bureau Serif";
+  src: url("assets/stk-bureau-serif-book.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+:root {
+  --bg: #F7F6F5;
+  --surface: #FCFCFC;
+  --ink: #141414;
+  --accent: #2600FF;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "STK Bureau Serif", Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, button, input {
+  font-family: "NB International Pro", Helvetica, Arial, sans-serif;
+}
+.eyebrow {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(20,20,20,0.6);
+}
+/* ---- gate ---- */
+#gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.gate-card {
+  background: var(--surface);
+  border: 1px solid rgba(20,20,20,0.12);
+  padding: 48px;
+  width: 100%;
+  max-width: 420px;
+}
+.gate-card .mark { height: 28px; margin-bottom: 32px; display: block; }
+.gate-card h1 { font-size: 20px; font-weight: 400; margin-bottom: 8px; }
+.gate-card p { font-size: 15px; color: rgba(20,20,20,0.7); margin-bottom: 28px; }
+.gate-card form { display: flex; flex-direction: column; gap: 12px; }
+.gate-card input {
+  border: 1px solid rgba(20,20,20,0.25);
+  border-radius: 0;
+  background: #fff;
+  padding: 12px 14px;
+  font-size: 15px;
+  outline: none;
+}
+.gate-card input:focus { border-color: var(--accent); }
+.gate-card button {
+  border: none;
+  border-radius: 0;
+  background: var(--ink);
+  color: #fff;
+  padding: 12px 14px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.gate-card button:hover { background: var(--accent); }
+#gate-error { color: #B00020; font-size: 13px; min-height: 18px; margin: 0; }
+/* ---- content ---- */
+.page { max-width: 760px; margin: 0 auto; padding: 48px 24px 96px; }
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 72px;
+}
+.topbar .mark { height: 24px; }
+.hero h1 { font-size: 40px; font-weight: 400; line-height: 1.15; margin-bottom: 16px; }
+.lede { font-size: 18px; line-height: 1.6; color: rgba(20,20,20,0.8); }
+.block { margin-top: 56px; border-top: 1px solid rgba(20,20,20,0.12); padding-top: 24px; }
+.block h2 { font-size: 22px; font-weight: 400; margin-bottom: 12px; }
+.block p, .block li { font-size: 16px; line-height: 1.7; }
+.block ul { padding-left: 20px; }
+.foot { margin-top: 96px; border-top: 1px solid rgba(20,20,20,0.12); padding-top: 24px; }
+</style>
+</head>
+<body>
+<div id="gate">
+  <div class="gate-card">
+    <img src="assets/cognition-mark.svg" alt="Cognition" class="mark" />
+    <h1>Protected page</h1>
+    <p>Enter the password you were given to view this page.</p>
+    <form id="gate-form">
+      <input type="password" id="gate-pass" placeholder="Password" autocomplete="current-password" autofocus />
+      <p id="gate-error"></p>
+      <button type="submit">View page</button>
+    </form>
+  </div>
+</div>
+<script>
+const PAYLOAD = {
+  salt: "__SALT__",
+  iv: "__IV__",
+  ct: "__CT__",
+  iterations: __ITERATIONS__
+};
+function b64ToBytes(b64) {
+  const bin = atob(b64);
+  const out = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+  return out;
+}
+async function deriveKey(password) {
+  const enc = new TextEncoder();
+  const base = await crypto.subtle.importKey("raw", enc.encode(password), "PBKDF2", false, ["deriveKey"]);
+  return crypto.subtle.deriveKey(
+    { name: "PBKDF2", salt: b64ToBytes(PAYLOAD.salt), iterations: PAYLOAD.iterations, hash: "SHA-256" },
+    base,
+    { name: "AES-GCM", length: 256 },
+    true,
+    ["decrypt"]
+  );
+}
+async function decryptWithKey(key) {
+  const pt = await crypto.subtle.decrypt(
+    { name: "AES-GCM", iv: b64ToBytes(PAYLOAD.iv) },
+    key,
+    b64ToBytes(PAYLOAD.ct)
+  );
+  return new TextDecoder().decode(pt);
+}
+function show(html) {
+  document.getElementById("gate").remove();
+  const wrap = document.createElement("div");
+  wrap.innerHTML = html;
+  document.body.appendChild(wrap);
+}
+async function tryCached() {
+  const raw = localStorage.getItem("gate-key");
+  if (!raw) return;
+  try {
+    const key = await crypto.subtle.importKey("raw", b64ToBytes(raw), { name: "AES-GCM" }, false, ["decrypt"]);
+    show(await decryptWithKey(key));
+  } catch (e) {
+    localStorage.removeItem("gate-key");
+  }
+}
+document.getElementById("gate-form").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const err = document.getElementById("gate-error");
+  err.textContent = "";
+  const pass = document.getElementById("gate-pass").value;
+  try {
+    const key = await deriveKey(pass);
+    const html = await decryptWithKey(key);
+    const raw = new Uint8Array(await crypto.subtle.exportKey("raw", key));
+    let bin = "";
+    raw.forEach((b) => (bin += String.fromCharCode(b)));
+    localStorage.setItem("gate-key", btoa(bin));
+    show(html);
+  } catch (e) {
+    err.textContent = "Incorrect password.";
+  }
+});
+tryCached();
+</script>
+</body>
+</html>
