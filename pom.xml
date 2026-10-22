@@ -109,6 +109,19 @@
         </dependencies>
     </dependencyManagement>
 
+    <profiles>
+        <!-- score-service-boot needs JDK 21; the legacy JDK 1.8 build is unchanged. -->
+        <profile>
+            <id>boot3</id>
+            <activation>
+                <jdk>[21,)</jdk>
+            </activation>
+            <modules>
+                <module>score-service-boot</module>
+            </modules>
+        </profile>
+    </profiles>
+
     <build>
         <pluginManagement>
             <plugins>
