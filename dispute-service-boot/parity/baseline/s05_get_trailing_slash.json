@@ -1,0 +1,42 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/disputes/40001/",
+    "body": null,
+    "target": "dispute"
+  },
+  "status": 200,
+  "contentType": "application/json;charset=utf-8",
+  "json": {
+    "dsptId": 40001,
+    "cnsmrId": 100016,
+    "trdlnId": 7000019,
+    "pubRecId": null,
+    "rsnCd": "WRONGSTS",
+    "chnlCd": "WEB",
+    "rcvdTs": "2024-12-20 10:15:00",
+    "slaDueDt": "2025-01-22",
+    "stsCd": "OPEN",
+    "outcomeCd": null,
+    "rslvdTs": null,
+    "rslvdBy": null,
+    "events": [
+      {
+        "evtId": 1,
+        "evtTypCd": "OPENED",
+        "evtTs": "2024-12-20 10:15:00",
+        "oprId": null,
+        "note": "Customer says arrears were cleared in October"
+      }
+    ],
+    "correspondence": [
+      {
+        "tmplCd": "ACK01",
+        "sentTs": "2024-12-20 18:00:00",
+        "chnlCd": "WEB"
+      }
+    ]
+  },
+  "nonJsonBody": null,
+  "outbound": []
+}

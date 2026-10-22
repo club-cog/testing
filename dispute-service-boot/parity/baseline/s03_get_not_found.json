@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/disputes/99999",
+    "body": null,
+    "target": "dispute"
+  },
+  "status": 404,
+  "contentType": "application/json;charset=utf-8",
+  "json": {
+    "error": "dispute 99999 not found"
+  },
+  "nonJsonBody": null,
+  "outbound": []
+}

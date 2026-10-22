@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dispute-service-config
+  labels:
+    app.kubernetes.io/name: dispute-service
+    app.kubernetes.io/part-of: uk-credit
+data:
+  SPRING_PROFILES_ACTIVE: postgres
+  PORT: "9083"
+  # 127.0.0.1 when the Cloud SQL Auth Proxy sidecar is enabled in deployment.yaml;
+  # otherwise the Cloud SQL private IP / DNS name.
+  DB_HOST: "127.0.0.1"
+  DB_PORT: "5432"
+  DB_NAME: ukcredit
+  DB_POOL_MAX: "10"
+  # In-cluster Services for the peers (still the legacy services until they migrate).
+  CREDITFILE_URL: http://credit-file-service:8081
+  SCORE_URL: http://score-service:8082
+  CREDITFILE_TIMEOUT_MS: "5000"
+  SCORE_TIMEOUT_MS: "10000"
+---
+# Template only: create the real Secret out-of-band (e.g. from Secret Manager), never commit values.
+#   kubectl create secret generic dispute-service-db --from-literal=DB_USER=... --from-literal=DB_PASSWORD=...
+apiVersion: v1
+kind: Secret
+metadata:
+  name: dispute-service-db
+  labels:
+    app.kubernetes.io/name: dispute-service
+type: Opaque
+stringData:
+  DB_USER: CHANGE_ME
+  DB_PASSWORD: CHANGE_ME

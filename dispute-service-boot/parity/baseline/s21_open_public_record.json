@@ -1,0 +1,59 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/disputes",
+    "body": {
+      "cnsmrId": 100014,
+      "pubRecId": 1,
+      "rsnCd": "PAIDOFF",
+      "chnlCd": "PST",
+      "rcvdTs": "2025-01-02T09:00:00"
+    },
+    "target": "dispute"
+  },
+  "status": 201,
+  "contentType": "application/json;charset=utf-8",
+  "json": {
+    "dsptId": 40016,
+    "cnsmrId": 100014,
+    "trdlnId": null,
+    "pubRecId": 1,
+    "rsnCd": "PAIDOFF",
+    "chnlCd": "PST",
+    "rcvdTs": "2025-01-02 09:00:00",
+    "slaDueDt": "2025-01-30",
+    "stsCd": "OPEN",
+    "outcomeCd": null,
+    "rslvdTs": null,
+    "rslvdBy": null,
+    "events": [
+      {
+        "evtId": 28,
+        "evtTypCd": "OPENED",
+        "evtTs": "<now>",
+        "oprId": null,
+        "note": "region=EW"
+      }
+    ],
+    "correspondence": [
+      {
+        "tmplCd": "ACK01",
+        "sentTs": "<now>",
+        "chnlCd": "PST"
+      }
+    ]
+  },
+  "nonJsonBody": null,
+  "outbound": [
+    {
+      "to": "score-service",
+      "method": "POST",
+      "path": "/score/100014/recalculate?trigger=DISPUTE_OPEN",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "text/plain, application/json, application/*+json, */*"
+      },
+      "body": ""
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/disputes/40015/resolve",
+    "body": {
+      "outcome": "DELETE",
+      "operatorId": "OPS0001"
+    },
+    "target": "dispute"
+  },
+  "status": 200,
+  "contentType": "application/json;charset=utf-8",
+  "json": {
+    "dsptId": 40015,
+    "cnsmrId": 100008,
+    "trdlnId": 7000012,
+    "pubRecId": null,
+    "rsnCd": "NOTMINE",
+    "chnlCd": "WEB",
+    "rcvdTs": "2024-12-20 10:15:00",
+    "slaDueDt": "2025-01-22",
+    "stsCd": "CLOSED",
+    "outcomeCd": "DELETE",
+    "rslvdTs": "<now>",
+    "rslvdBy": "OPS0001",
+    "events": [
+      {
+        "evtId": 27,
+        "evtTypCd": "OPENED",
+        "evtTs": "<now>",
+        "oprId": null,
+        "note": "region=EW"
+      },
+      {
+        "evtId": 32,
+        "evtTypCd": "CLOSED",
+        "evtTs": "<now>",
+        "oprId": "OPS0001",
+        "note": "outcome=DELETE"
+      }
+    ],
+    "correspondence": [
+      {
+        "tmplCd": "ACK01",
+        "sentTs": "<now>",
+        "chnlCd": "WEB"
+      },
+      {
+        "tmplCd": "RES01",
+        "sentTs": "<now>",
+        "chnlCd": "WEB"
+      }
+    ]
+  },
+  "nonJsonBody": null,
+  "outbound": [
+    {
+      "to": "credit-file-service",
+      "method": "POST",
+      "path": "/ws/TradelineMaintenance",
+      "headers": {
+        "Content-Type": "text/xml;charset=UTF-8",
+        "SOAPAction": "urn:ukcredit:tradeline:v1:AmendTradeline",
+        "Accept": "text/plain, application/json, application/*+json, */*"
+      },
+      "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:AmendTradelineRequest><tl:tradelineId>7000012</tl:tradelineId><tl:delete>true</tl:delete><tl:operatorId>OPS0001</tl:operatorId></tl:AmendTradelineRequest></soapenv:Body></soapenv:Envelope>"
+    },
+    {
+      "to": "credit-file-service",
+      "method": "POST",
+      "path": "/ws/TradelineMaintenance",
+      "headers": {
+        "Content-Type": "text/xml;charset=UTF-8",
+        "SOAPAction": "urn:ukcredit:tradeline:v1:SetDisputeFlag",
+        "Accept": "text/plain, application/json, application/*+json, */*"
+      },
+      "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:SetDisputeFlagRequest><tl:tradelineId>7000012</tl:tradelineId><tl:flag>N</tl:flag></tl:SetDisputeFlagRequest></soapenv:Body></soapenv:Envelope>"
+    },
+    {
+      "to": "score-service",
+      "method": "POST",
+      "path": "/score/100008/recalculate?trigger=DISPUTE_CLOSE",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "text/plain, application/json, application/*+json, */*"
+      },
+      "body": ""
+    }
+  ]
+}

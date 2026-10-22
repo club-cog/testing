@@ -1,0 +1,17 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/disputes/sla?received=2024-12-20T18:00:00&region=SC",
+    "body": null,
+    "target": "dispute"
+  },
+  "status": 200,
+  "contentType": "application/json;charset=utf-8",
+  "json": {
+    "received": "2024-12-20T18:00:00",
+    "region": "SC",
+    "slaDueDt": "2025-01-24"
+  },
+  "nonJsonBody": null,
+  "outbound": []
+}

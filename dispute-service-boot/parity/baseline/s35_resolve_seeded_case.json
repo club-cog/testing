@@ -1,0 +1,79 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/disputes/40001/resolve",
+    "body": {
+      "outcome": "NOCHANGE",
+      "operatorId": "OPS0002"
+    },
+    "target": "dispute"
+  },
+  "status": 200,
+  "contentType": "application/json;charset=utf-8",
+  "json": {
+    "dsptId": 40001,
+    "cnsmrId": 100016,
+    "trdlnId": 7000019,
+    "pubRecId": null,
+    "rsnCd": "WRONGSTS",
+    "chnlCd": "WEB",
+    "rcvdTs": "2024-12-20 10:15:00",
+    "slaDueDt": "2025-01-22",
+    "stsCd": "CLOSED",
+    "outcomeCd": "NOCHANGE",
+    "rslvdTs": "<now>",
+    "rslvdBy": "OPS0002",
+    "events": [
+      {
+        "evtId": 1,
+        "evtTypCd": "OPENED",
+        "evtTs": "2024-12-20 10:15:00",
+        "oprId": null,
+        "note": "Customer says arrears were cleared in October"
+      },
+      {
+        "evtId": 34,
+        "evtTypCd": "CLOSED",
+        "evtTs": "<now>",
+        "oprId": "OPS0002",
+        "note": "outcome=NOCHANGE"
+      }
+    ],
+    "correspondence": [
+      {
+        "tmplCd": "ACK01",
+        "sentTs": "2024-12-20 18:00:00",
+        "chnlCd": "WEB"
+      },
+      {
+        "tmplCd": "RES02",
+        "sentTs": "<now>",
+        "chnlCd": "WEB"
+      }
+    ]
+  },
+  "nonJsonBody": null,
+  "outbound": [
+    {
+      "to": "credit-file-service",
+      "method": "POST",
+      "path": "/ws/TradelineMaintenance",
+      "headers": {
+        "Content-Type": "text/xml;charset=UTF-8",
+        "SOAPAction": "urn:ukcredit:tradeline:v1:SetDisputeFlag",
+        "Accept": "text/plain, application/json, application/*+json, */*"
+      },
+      "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:SetDisputeFlagRequest><tl:tradelineId>7000019</tl:tradelineId><tl:flag>N</tl:flag></tl:SetDisputeFlagRequest></soapenv:Body></soapenv:Envelope>"
+    },
+    {
+      "to": "score-service",
+      "method": "POST",
+      "path": "/score/100016/recalculate?trigger=DISPUTE_CLOSE",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "text/plain, application/json, application/*+json, */*"
+      },
+      "body": ""
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/disputes",
+    "body": {
+      "cnsmrId": 100012,
+      "trdlnId": 7000016,
+      "rsnCd": "WRONGBAL",
+      "chnlCd": "TEL",
+      "rcvdTs": "2024-12-20T18:00:00"
+    },
+    "target": "dispute"
+  },
+  "status": 201,
+  "contentType": "application/json;charset=utf-8",
+  "json": {
+    "dsptId": 40014,
+    "cnsmrId": 100012,
+    "trdlnId": 7000016,
+    "pubRecId": null,
+    "rsnCd": "WRONGBAL",
+    "chnlCd": "TEL",
+    "rcvdTs": "2024-12-20 18:00:00",
+    "slaDueDt": "2025-01-24",
+    "stsCd": "OPEN",
+    "outcomeCd": null,
+    "rslvdTs": null,
+    "rslvdBy": null,
+    "events": [
+      {
+        "evtId": 26,
+        "evtTypCd": "OPENED",
+        "evtTs": "<now>",
+        "oprId": null,
+        "note": "region=SC"
+      }
+    ],
+    "correspondence": [
+      {
+        "tmplCd": "ACK01",
+        "sentTs": "<now>",
+        "chnlCd": "TEL"
+      }
+    ]
+  },
+  "nonJsonBody": null,
+  "outbound": [
+    {
+      "to": "credit-file-service",
+      "method": "POST",
+      "path": "/ws/TradelineMaintenance",
+      "headers": {
+        "Content-Type": "text/xml;charset=UTF-8",
+        "SOAPAction": "urn:ukcredit:tradeline:v1:SetDisputeFlag",
+        "Accept": "text/plain, application/json, application/*+json, */*"
+      },
+      "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:SetDisputeFlagRequest><tl:tradelineId>7000016</tl:tradelineId><tl:flag>Y</tl:flag></tl:SetDisputeFlagRequest></soapenv:Body></soapenv:Envelope>"
+    },
+    {
+      "to": "score-service",
+      "method": "POST",
+      "path": "/score/100012/recalculate?trigger=DISPUTE_OPEN",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "text/plain, application/json, application/*+json, */*"
+      },
+      "body": ""
+    }
+  ]
+}
