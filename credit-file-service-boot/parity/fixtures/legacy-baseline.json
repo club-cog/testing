@@ -1,0 +1,2196 @@
+[
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 1,
+     "addrId": 500001,
+     "from": "2010-02-01",
+     "line1": "14 Wellmeadow Road",
+     "postcode": "RG1 4QT",
+     "source": "ERL",
+     "to": null,
+     "town": "Reading"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100001,
+    "dob": "1975-03-12",
+    "firstName": "Xander",
+    "matchKey": "PRYCE|19750312|X",
+    "middleName": null,
+    "surname": "Pryce",
+    "title": "MR"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500001,
+     "erId": 1,
+     "from": "2010-02-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "CC",
+     "balanceDisplay": "1320.00",
+     "balancePence": 132000,
+     "closeDate": null,
+     "creditLimit": 1500,
+     "disputed": false,
+     "lender": "CCX301",
+     "lenderName": "Pennant Credit (closed book)",
+     "mappedStatus": "DEFAULT",
+     "openDate": "2009-04-01",
+     "paymentProfile": "XXX000000000000000000000",
+     "revolving": true,
+     "statusCd": "X",
+     "statusDate": "2013-11-15",
+     "trdlnId": 7000002
+    },
+    {
+     "accountType": "CC",
+     "balanceDisplay": "450.00",
+     "balancePence": 45000,
+     "closeDate": null,
+     "creditLimit": 2000,
+     "disputed": false,
+     "lender": "CCX220",
+     "lenderName": "Kestrel Card Services",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "2011-05-01",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": true,
+     "statusCd": "0",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000001
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100001",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 2,
+     "addrId": 500002,
+     "from": "2014-09-01",
+     "line1": "3 Orchard Close",
+     "postcode": "NR2 3HP",
+     "source": "CAI",
+     "to": null,
+     "town": "Norwich"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100002,
+    "dob": "1981-07-30",
+    "firstName": "Yasmin",
+    "matchKey": "ACHTERBERG|19810730|Y",
+    "middleName": null,
+    "surname": "Achterberg",
+    "title": "MS"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500002,
+     "erId": 2,
+     "from": "2015-01-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "SC",
+     "balanceDisplay": "610.00",
+     "balancePence": 61000,
+     "closeDate": null,
+     "creditLimit": 800,
+     "disputed": false,
+     "lender": "RTL031",
+     "lenderName": "Hollins & Pike Retail Finance",
+     "mappedStatus": "ARRANGEMENT",
+     "openDate": "2015-03-01",
+     "paymentProfile": "XXX000000000000000000000",
+     "revolving": true,
+     "statusCd": "X",
+     "statusDate": "2016-06-01",
+     "trdlnId": 7000003
+    },
+    {
+     "accountType": "MO",
+     "balanceDisplay": "24.00",
+     "balancePence": 2400,
+     "closeDate": null,
+     "creditLimit": null,
+     "disputed": false,
+     "lender": "TEL009",
+     "lenderName": "Northline Mobile",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "2019-01-10",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": false,
+     "statusCd": "0",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000004
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100002",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 3,
+     "addrId": 500003,
+     "from": "2005-06-01",
+     "line1": "88 Victoria Road",
+     "postcode": "CF5 1JR",
+     "source": "ERL",
+     "to": null,
+     "town": "Cardiff"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100003,
+    "dob": "1969-11-02",
+    "firstName": "Owen",
+    "matchKey": "CASTELLANE|19691102|O",
+    "middleName": "Llyr",
+    "surname": "Castellane",
+    "title": "MR"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500003,
+     "erId": 3,
+     "from": "2005-06-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "UT",
+     "balanceDisplay": "95.00",
+     "balancePence": 9500,
+     "closeDate": null,
+     "creditLimit": null,
+     "disputed": false,
+     "lender": "UTL112",
+     "lenderName": "Brightwater Energy",
+     "mappedStatus": "ARRANGEMENT",
+     "openDate": "2010-09-01",
+     "paymentProfile": "XXX000000000000000000000",
+     "revolving": false,
+     "statusCd": "X",
+     "statusDate": "2014-04-01",
+     "trdlnId": 7000006
+    },
+    {
+     "accountType": "MO",
+     "balanceDisplay": "180.00",
+     "balancePence": 18000,
+     "closeDate": null,
+     "creditLimit": null,
+     "disputed": false,
+     "lender": "TEL009",
+     "lenderName": "Northline Mobile",
+     "mappedStatus": "DEFAULT",
+     "openDate": "2012-02-01",
+     "paymentProfile": "XXX000000000000000000000",
+     "revolving": false,
+     "statusCd": "X",
+     "statusDate": "2014-03-31",
+     "trdlnId": 7000005
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100003",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 4,
+     "addrId": 500004,
+     "from": "2012-04-01",
+     "line1": "27 Kings Drive",
+     "postcode": "B15 2TT",
+     "source": "CAI",
+     "to": null,
+     "town": "Birmingham"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100004,
+    "dob": "1988-01-19",
+    "firstName": "Priya",
+    "matchKey": "KANDASAMY|19880119|P",
+    "middleName": null,
+    "surname": "Kandasamy",
+    "title": "MRS"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500004,
+     "erId": 4,
+     "from": "2012-04-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "CC",
+     "balanceDisplay": "1200.00",
+     "balancePence": 120000,
+     "closeDate": null,
+     "creditLimit": 3000,
+     "disputed": false,
+     "lender": "CCX220",
+     "lenderName": "Kestrel Card Services",
+     "mappedStatus": "ARRANGEMENT",
+     "openDate": "2010-08-01",
+     "paymentProfile": "XXX000000000000000000000",
+     "revolving": true,
+     "statusCd": "X",
+     "statusDate": "2014-06-01",
+     "trdlnId": 7000007
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100004",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 5,
+     "addrId": 500005,
+     "from": "2016-03-01",
+     "line1": "5 Brook Street",
+     "postcode": "LS2 7EW",
+     "source": "ERL",
+     "to": null,
+     "town": "Leeds"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100005,
+    "dob": "1979-05-05",
+    "firstName": "Daniel",
+    "matchKey": "OKONKWOHART|19790505|D",
+    "middleName": null,
+    "surname": "Okonkwo-Hart",
+    "title": "MR"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500005,
+     "erId": 5,
+     "from": "2016-03-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "CC",
+     "balanceDisplay": "749.50",
+     "balancePence": 74950,
+     "closeDate": null,
+     "creditLimit": 1000,
+     "disputed": false,
+     "lender": "CCX220",
+     "lenderName": "Kestrel Card Services",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "2017-01-15",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": true,
+     "statusCd": "0",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000008
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100005",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 6,
+     "addrId": 500006,
+     "from": "2018-07-01",
+     "line1": "41 Park Avenue",
+     "postcode": "BS8 1TH",
+     "source": "CAI",
+     "to": null,
+     "town": "Bristol"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100006,
+    "dob": "1990-09-14",
+    "firstName": "Harriet",
+    "matchKey": "LINDQVIST|19900914|H",
+    "middleName": null,
+    "surname": "Lindqvist",
+    "title": "MS"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500006,
+     "erId": 6,
+     "from": "2018-07-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "CC",
+     "balanceDisplay": "300.50",
+     "balancePence": 30050,
+     "closeDate": null,
+     "creditLimit": 500,
+     "disputed": false,
+     "lender": "CCX220",
+     "lenderName": "Kestrel Card Services",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "2018-09-01",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": true,
+     "statusCd": "0",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000009
+    },
+    {
+     "accountType": "CC",
+     "balanceDisplay": "449.00",
+     "balancePence": 44900,
+     "closeDate": null,
+     "creditLimit": 500,
+     "disputed": false,
+     "lender": "BKA001",
+     "lenderName": "Albion Mutual Bank",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "2019-02-01",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": true,
+     "statusCd": "0",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000010
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100006",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 7,
+     "addrId": 500007,
+     "from": "2009-01-01",
+     "line1": "9 Mill Lane",
+     "postcode": "EX4 4QJ",
+     "source": "ERL",
+     "to": null,
+     "town": "Exeter"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100007,
+    "dob": "1972-12-01",
+    "firstName": "Tomasz",
+    "matchKey": "BRENNAN|19721201|T",
+    "middleName": null,
+    "surname": "Brennan",
+    "title": "MR"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500007,
+     "erId": 7,
+     "from": "2009-01-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "CC",
+     "balanceDisplay": "500.50",
+     "balancePence": 50050,
+     "closeDate": null,
+     "creditLimit": 1002,
+     "disputed": false,
+     "lender": "CCX220",
+     "lenderName": "Kestrel Card Services",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "2013-06-01",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": true,
+     "statusCd": "0",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000011
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100007",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 8,
+     "addrId": 500008,
+     "from": "2017-10-01",
+     "line1": "12 Chapel Row",
+     "postcode": "BT7 1NN",
+     "source": "ERL",
+     "to": null,
+     "town": "Belfast"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100008,
+    "dob": "1984-02-29",
+    "firstName": "Siobhán",
+    "matchKey": "OBRIAIN|19840229|S",
+    "middleName": null,
+    "surname": "Ó Briain",
+    "title": "MS"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500008,
+     "erId": 8,
+     "from": "2017-10-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "CA",
+     "balanceDisplay": "120.00",
+     "balancePence": 12000,
+     "closeDate": null,
+     "creditLimit": 500,
+     "disputed": false,
+     "lender": "BKB014",
+     "lenderName": "Thamesgate Building Society",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "2017-11-01",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": true,
+     "statusCd": "0",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000012
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100008",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 9,
+     "addrId": 500009,
+     "from": "2003-05-01",
+     "line1": "70 Queens Road",
+     "postcode": "BN1 3XE",
+     "source": "ERL",
+     "to": null,
+     "town": "Brighton"
+    }
+   ],
+   "aliases": [
+    {
+     "firstName": "Renée",
+     "surname": "Dubois",
+     "type": "MN"
+    }
+   ],
+   "consumer": {
+    "cnsmrId": 100009,
+    "dob": "1966-04-21",
+    "firstName": "Renée",
+    "matchKey": "DUBOISMARCHAND|19660421|R",
+    "middleName": null,
+    "surname": "Dubois-Marchand",
+    "title": "MRS"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500009,
+     "erId": 9,
+     "from": "2003-05-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "MG",
+     "balanceDisplay": "86500.00",
+     "balancePence": 8650000,
+     "closeDate": null,
+     "creditLimit": null,
+     "disputed": false,
+     "lender": "MTG005",
+     "lenderName": "Caledon Home Loans",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "2003-05-01",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": false,
+     "statusCd": "0",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000013
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100009",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 10,
+     "addrId": 500010,
+     "from": "2020-01-15",
+     "line1": "101 Station Road",
+     "postcode": "M14 5RQ",
+     "source": "CAI",
+     "to": null,
+     "town": "Manchester"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100010,
+    "dob": "1992-08-08",
+    "firstName": "Łukasz",
+    "matchKey": "WISNIEWSKI|19920808|L",
+    "middleName": null,
+    "surname": "Wiśniewski",
+    "title": "MR"
+   },
+   "electoralRoll": [],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "MO",
+     "balanceDisplay": "35.00",
+     "balancePence": 3500,
+     "closeDate": null,
+     "creditLimit": null,
+     "disputed": false,
+     "lender": "TEL009",
+     "lenderName": "Northline Mobile",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "2020-02-01",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": false,
+     "statusCd": "0",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000014
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100010",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 13,
+     "addrId": 500011,
+     "from": "2019-05-01",
+     "line1": "12 Elm Grove",
+     "postcode": "LS6 2AB",
+     "source": "ERL",
+     "to": null,
+     "town": "Leeds"
+    },
+    {
+     "addrHistId": 11,
+     "addrId": 500012,
+     "from": "2012-08-01",
+     "line1": "4 Albert Terrace",
+     "postcode": "LS4 2HR",
+     "source": "CAI",
+     "to": "2019-04-30",
+     "town": "Leeds"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100011,
+    "dob": "1958-10-10",
+    "firstName": "Margaret",
+    "matchKey": "STRAUSS|19581010|M",
+    "middleName": "Anne",
+    "surname": "Strauß",
+    "title": "MRS"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500011,
+     "erId": 10,
+     "from": "2019-05-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "CA",
+     "balanceDisplay": "0.00",
+     "balancePence": 0,
+     "closeDate": null,
+     "creditLimit": 250,
+     "disputed": false,
+     "lender": "BKB014",
+     "lenderName": "Thamesgate Building Society",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "1990-04-01",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": true,
+     "statusCd": "0",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000015
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100011",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 15,
+     "addrId": 500013,
+     "from": "2011-08-01",
+     "line1": "22 The Crescent",
+     "postcode": "EH3 9QG",
+     "source": "ERL",
+     "to": null,
+     "town": "Edinburgh"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100012,
+    "dob": "1983-03-03",
+    "firstName": "Callum",
+    "matchKey": "MACLEOD|19830303|C",
+    "middleName": null,
+    "surname": "MacLeod",
+    "title": "MR"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500013,
+     "erId": 11,
+     "from": "2011-08-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "CC",
+     "balanceDisplay": "640.00",
+     "balancePence": 64000,
+     "closeDate": null,
+     "creditLimit": 5000,
+     "disputed": false,
+     "lender": "CCX220",
+     "lenderName": "Kestrel Card Services",
+     "mappedStatus": "ARREARS_1",
+     "openDate": "2012-01-01",
+     "paymentProfile": "111000000000000000000000",
+     "revolving": true,
+     "statusCd": "1",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000016
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100012",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 16,
+     "addrId": 500014,
+     "from": "2021-09-01",
+     "line1": "6 Meadow View",
+     "postcode": "BS1 5TR",
+     "source": "CAI",
+     "to": null,
+     "town": "Bristol"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100013,
+    "dob": "1995-06-25",
+    "firstName": "Grace",
+    "matchKey": "WHITFIELD|19950625|G",
+    "middleName": null,
+    "surname": "Whitfield",
+    "title": "MS"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500014,
+     "erId": 12,
+     "from": "2021-09-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "SC",
+     "balanceDisplay": "300.00",
+     "balancePence": 30000,
+     "closeDate": null,
+     "creditLimit": 1200,
+     "disputed": false,
+     "lender": "RTL031",
+     "lenderName": "Hollins & Pike Retail Finance",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "2022-03-01",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": true,
+     "statusCd": "0",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000017
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100013",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 17,
+     "addrId": 500015,
+     "from": "2015-02-01",
+     "line1": "19 Church Lane",
+     "postcode": "SA1 2BX",
+     "source": "CAI",
+     "to": null,
+     "town": "Swansea"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100014,
+    "dob": "1970-01-15",
+    "firstName": "Kevin",
+    "matchKey": "DOYLE|19700115|K",
+    "middleName": null,
+    "surname": "Doyle",
+    "title": "MR"
+   },
+   "electoralRoll": [],
+   "notices": [],
+   "publicRecords": [
+    {
+     "amount": "1240.00",
+     "caseRef": "K9QZ12A4",
+     "court": "CCMC",
+     "disputed": false,
+     "judgmentDate": "2021-08-10",
+     "pubRecId": 1,
+     "satisfiedDate": null,
+     "type": "CCJ"
+    },
+    {
+     "amount": "560.00",
+     "caseRef": "F2CF55B1",
+     "court": "CRDF",
+     "disputed": false,
+     "judgmentDate": "2019-02-01",
+     "pubRecId": 2,
+     "satisfiedDate": "2019-05-01",
+     "type": "CCJ"
+    }
+   ],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "UT",
+     "balanceDisplay": "210.00",
+     "balancePence": 21000,
+     "closeDate": null,
+     "creditLimit": null,
+     "disputed": false,
+     "lender": "UTL112",
+     "lenderName": "Brightwater Energy",
+     "mappedStatus": "ARREARS_3",
+     "openDate": "2015-02-01",
+     "paymentProfile": "333000000000000000000000",
+     "revolving": false,
+     "statusCd": "3",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000018
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100014",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 18,
+     "addrId": 500016,
+     "from": "2022-09-01",
+     "line1": "2 Orchard Close",
+     "postcode": "EX2 8LB",
+     "source": "ERL",
+     "to": null,
+     "town": "Exeter"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100015,
+    "dob": "2003-10-10",
+    "firstName": "Amelia",
+    "matchKey": "HART|20031010|A",
+    "middleName": null,
+    "surname": "Hart",
+    "title": "MISS"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500016,
+     "erId": 13,
+     "from": "2022-09-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": []
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100015",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 19,
+     "addrId": 500017,
+     "from": "2013-03-01",
+     "line1": "55 High Street",
+     "postcode": "RG4 8AA",
+     "source": "ERL",
+     "to": null,
+     "town": "Reading"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100016,
+    "dob": "1977-02-14",
+    "firstName": "Rajesh",
+    "matchKey": "MENON|19770214|R",
+    "middleName": null,
+    "surname": "Menon",
+    "title": "MR"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500017,
+     "erId": 14,
+     "from": "2013-03-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "CC",
+     "balanceDisplay": "2500.00",
+     "balancePence": 250000,
+     "closeDate": null,
+     "creditLimit": 4000,
+     "disputed": true,
+     "lender": "BKA001",
+     "lenderName": "Albion Mutual Bank",
+     "mappedStatus": "ARREARS_2",
+     "openDate": "2014-07-01",
+     "paymentProfile": "222000000000000000000000",
+     "revolving": true,
+     "statusCd": "2",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000019
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100016",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 27,
+     "addrId": 500025,
+     "from": "2021-08-01",
+     "line1": "57 Orchard Close",
+     "postcode": "BN2 1XT",
+     "source": "ERL",
+     "to": null,
+     "town": "Brighton"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100020,
+    "dob": "2001-10-07",
+    "firstName": "Adam",
+    "matchKey": "LEWIS|20011007|A",
+    "middleName": null,
+    "surname": "Lewis",
+    "title": "MR"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500025,
+     "erId": 18,
+     "from": "2021-08-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "CC",
+     "balanceDisplay": "0.00",
+     "balancePence": 0,
+     "closeDate": "2024-10-30",
+     "creditLimit": 7500,
+     "disputed": false,
+     "lender": "BKA001",
+     "lenderName": "Albion Mutual Bank",
+     "mappedStatus": "SETTLED",
+     "openDate": "2012-06-19",
+     "paymentProfile": "S00000000000000000000000",
+     "revolving": true,
+     "statusCd": "S",
+     "statusDate": "2024-10-30",
+     "trdlnId": 7000035
+    },
+    {
+     "accountType": "CC",
+     "balanceDisplay": "100.14",
+     "balancePence": 10014,
+     "closeDate": null,
+     "creditLimit": 1750,
+     "disputed": false,
+     "lender": "CCX301",
+     "lenderName": "Pennant Credit (closed book)",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "2020-03-30",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": true,
+     "statusCd": "0",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000034
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100020",
+  "status": 200
+ },
+ {
+  "body": "",
+  "contentType": null,
+  "name": "GET /creditfile/999999 (unknown)",
+  "status": 404
+ },
+ {
+  "body": "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"/>\n<title>Error 400 Bad Request</title>\n</head>\n<body><h2>HTTP ERROR 400 Bad Request</h2>\n<table>\n<tr><th>URI:</th><td>/creditfile/abc</td></tr>\n<tr><th>STATUS:</th><td>400</td></tr>\n<tr><th>MESSAGE:</th><td>Bad Request</td></tr>\n<tr><th>SERVLET:</th><td>dispatcher</td></tr>\n</table>\n<hr/><a href=\"https://eclipse.org/jetty\">Powered by Jetty:// 9.4.53.v20231009</a><hr/>\n\n</body>\n</html>\n",
+  "contentType": "text/html;charset=iso-8859-1",
+  "name": "GET /creditfile/abc (bad id)",
+  "status": 400
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 1,
+     "addrId": 500001,
+     "from": "2010-02-01",
+     "line1": "14 Wellmeadow Road",
+     "postcode": "RG1 4QT",
+     "source": "ERL",
+     "to": null,
+     "town": "Reading"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100001,
+    "dob": "1975-03-12",
+    "firstName": "Xander",
+    "matchKey": "PRYCE|19750312|X",
+    "middleName": null,
+    "surname": "Pryce",
+    "title": "MR"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500001,
+     "erId": 1,
+     "from": "2010-02-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "CC",
+     "balanceDisplay": "1320.00",
+     "balancePence": 132000,
+     "closeDate": null,
+     "creditLimit": 1500,
+     "disputed": false,
+     "lender": "CCX301",
+     "lenderName": "Pennant Credit (closed book)",
+     "mappedStatus": "DEFAULT",
+     "openDate": "2009-04-01",
+     "paymentProfile": "XXX000000000000000000000",
+     "revolving": true,
+     "statusCd": "X",
+     "statusDate": "2013-11-15",
+     "trdlnId": 7000002
+    },
+    {
+     "accountType": "CC",
+     "balanceDisplay": "450.00",
+     "balancePence": 45000,
+     "closeDate": null,
+     "creditLimit": 2000,
+     "disputed": false,
+     "lender": "CCX220",
+     "lenderName": "Kestrel Card Services",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "2011-05-01",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": true,
+     "statusCd": "0",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000001
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100001/ (trailing slash)",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 1,
+     "addrId": 500001,
+     "from": "2010-02-01",
+     "line1": "14 Wellmeadow Road",
+     "postcode": "RG1 4QT",
+     "source": "ERL",
+     "to": null,
+     "town": "Reading"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100001,
+    "dob": "1975-03-12",
+    "firstName": "Xander",
+    "matchKey": "PRYCE|19750312|X",
+    "middleName": null,
+    "surname": "Pryce",
+    "title": "MR"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500001,
+     "erId": 1,
+     "from": "2010-02-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "CC",
+     "balanceDisplay": "1320.00",
+     "balancePence": 132000,
+     "closeDate": null,
+     "creditLimit": 1500,
+     "disputed": false,
+     "lender": "CCX301",
+     "lenderName": "Pennant Credit (closed book)",
+     "mappedStatus": "DEFAULT",
+     "openDate": "2009-04-01",
+     "paymentProfile": "XXX000000000000000000000",
+     "revolving": true,
+     "statusCd": "X",
+     "statusDate": "2013-11-15",
+     "trdlnId": 7000002
+    },
+    {
+     "accountType": "CC",
+     "balanceDisplay": "450.00",
+     "balancePence": 45000,
+     "closeDate": null,
+     "creditLimit": 2000,
+     "disputed": false,
+     "lender": "CCX220",
+     "lenderName": "Kestrel Card Services",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "2011-05-01",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": true,
+     "statusCd": "0",
+     "statusDate": "2024-11-30",
+     "trdlnId": 7000001
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100001.json (suffix match)",
+  "status": 200
+ },
+ {
+  "body": "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"/>\n<title>Error 405 Request method &apos;POST&apos; not supported</title>\n</head>\n<body><h2>HTTP ERROR 405 Request method &apos;POST&apos; not supported</h2>\n<table>\n<tr><th>URI:</th><td>/creditfile/100001</td></tr>\n<tr><th>STATUS:</th><td>405</td></tr>\n<tr><th>MESSAGE:</th><td>Request method &apos;POST&apos; not supported</td></tr>\n<tr><th>SERVLET:</th><td>dispatcher</td></tr>\n</table>\n<hr/><a href=\"https://eclipse.org/jetty\">Powered by Jetty:// 9.4.53.v20231009</a><hr/>\n\n</body>\n</html>\n",
+  "contentType": "text/html;charset=iso-8859-1",
+  "name": "POST /creditfile/100001 (wrong method)",
+  "status": 405
+ },
+ {
+  "body": "",
+  "contentType": null,
+  "name": "GET /creditfile/100001 Accept: application/xml",
+  "status": 406
+ },
+ {
+  "body": [
+   {
+    "cnsmrId": 100008,
+    "dob": "1984-02-29",
+    "firstName": "Siobhán",
+    "surname": "Ó Briain"
+   }
+  ],
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /consumers/match Siobhan O Briain (unaccented)",
+  "status": 200
+ },
+ {
+  "body": [
+   {
+    "cnsmrId": 100008,
+    "dob": "1984-02-29",
+    "firstName": "Siobhán",
+    "surname": "Ó Briain"
+   }
+  ],
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /consumers/match Siobhan OBriain (no space)",
+  "status": 200
+ },
+ {
+  "body": [
+   {
+    "cnsmrId": 100008,
+    "dob": "1984-02-29",
+    "firstName": "Siobhán",
+    "surname": "Ó Briain"
+   }
+  ],
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /consumers/match Siobhan O'Briain (apostrophe)",
+  "status": 200
+ },
+ {
+  "body": [
+   {
+    "cnsmrId": 100008,
+    "dob": "1984-02-29",
+    "firstName": "Siobhán",
+    "surname": "Ó Briain"
+   }
+  ],
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /consumers/match Siobhán Ó Briain (accented)",
+  "status": 200
+ },
+ {
+  "body": [
+   {
+    "cnsmrId": 100009,
+    "dob": "1966-04-21",
+    "firstName": "Renée",
+    "surname": "Dubois-Marchand"
+   }
+  ],
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /consumers/match Renee Dubois Marchand",
+  "status": 200
+ },
+ {
+  "body": [
+   {
+    "cnsmrId": 100010,
+    "dob": "1992-08-08",
+    "firstName": "Łukasz",
+    "surname": "Wiśniewski"
+   }
+  ],
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /consumers/match Lukasz Wisniewski",
+  "status": 200
+ },
+ {
+  "body": [
+   {
+    "cnsmrId": 100011,
+    "dob": "1958-10-10",
+    "firstName": "Margaret",
+    "surname": "Strauß"
+   }
+  ],
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /consumers/match Margaret Strauss (sharp s)",
+  "status": 200
+ },
+ {
+  "body": [
+   {
+    "cnsmrId": 100011,
+    "dob": "1958-10-10",
+    "firstName": "Margaret",
+    "surname": "Strauß"
+   }
+  ],
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /consumers/match Margaret STRAUSS upper",
+  "status": 200
+ },
+ {
+  "body": [
+   {
+    "cnsmrId": 100001,
+    "dob": "1975-03-12",
+    "firstName": "Xander",
+    "surname": "Pryce"
+   }
+  ],
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /consumers/match X Pryce (initial)",
+  "status": 200
+ },
+ {
+  "body": [
+   {
+    "cnsmrId": 100001,
+    "dob": "1975-03-12",
+    "firstName": "Xander",
+    "surname": "Pryce"
+   }
+  ],
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /consumers/match Xan Pryce (short form)",
+  "status": 200
+ },
+ {
+  "body": [],
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /consumers/match Xa Pryce (2-char, no match)",
+  "status": 200
+ },
+ {
+  "body": [],
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /consumers/match Xander Pryce wrong dob",
+  "status": 200
+ },
+ {
+  "body": "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"/>\n<title>Error 400 Required String parameter &apos;dob&apos; is not present</title>\n</head>\n<body><h2>HTTP ERROR 400 Required String parameter &apos;dob&apos; is not present</h2>\n<table>\n<tr><th>URI:</th><td>/consumers/match</td></tr>\n<tr><th>STATUS:</th><td>400</td></tr>\n<tr><th>MESSAGE:</th><td>Required String parameter &apos;dob&apos; is not present</td></tr>\n<tr><th>SERVLET:</th><td>dispatcher</td></tr>\n</table>\n<hr/><a href=\"https://eclipse.org/jetty\">Powered by Jetty:// 9.4.53.v20231009</a><hr/>\n\n</body>\n</html>\n",
+  "contentType": "text/html;charset=iso-8859-1",
+  "name": "GET /consumers/match missing dob",
+  "status": 400
+ },
+ {
+  "body": "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"/>\n<title>Error 500 org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.time.format.DateTimeParseException: Text &apos;12/03/1975&apos; could not be parsed at index 0</title>\n</head>\n<body><h2>HTTP ERROR 500 org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.time.format.DateTimeParseException: Text &apos;12/03/1975&apos; could not be parsed at index 0</h2>\n<table>\n<tr><th>URI:</th><td>/consumers/match</td></tr>\n<tr><th>STATUS:</th><td>500</td></tr>\n<tr><th>MESSAGE:</th><td>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.time.format.DateTimeParseException: Text &apos;12/03/1975&apos; could not be parsed at index 0</td></tr>\n<tr><th>SERVLET:</th><td>dispatcher</td></tr>\n<tr><th>CAUSED BY:</th><td>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.time.format.DateTimeParseException: Text &apos;12/03/1975&apos; could not be parsed at index 0</td></tr>\n<tr><th>CAUSED BY:</th><td>java.time.format.DateTimeParseException: Text &apos;12/03/1975&apos; could not be parsed at index 0</td></tr>\n</table>\n<h3>Caused by:</h3><pre>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.time.format.DateTimeParseException: Text &apos;12/03/1975&apos; could not be parsed at index 0\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)\n\tat org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:687)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\n\tat org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)\n\tat org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:554)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)\n\tat org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)\n\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)\n\tat org.eclipse.jetty.server.Server.handle(Server.java:516)\n\tat org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487)\n\tat org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732)\n\tat org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479)\n\tat org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)\n\tat org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)\n\tat org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)\n\tat org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)\n\tat org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)\n\tat java.lang.Thread.run(Thread.java:750)\nCaused by: java.time.format.DateTimeParseException: Text &apos;12/03/1975&apos; could not be parsed at index 0\n\tat java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:1949)\n\tat java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1851)\n\tat java.time.LocalDate.parse(LocalDate.java:400)\n\tat java.time.LocalDate.parse(LocalDate.java:385)\n\tat com.ukcredit.creditfile.web.CreditFileController.match(CreditFileController.java:47)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:204)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:854)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:765)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)\n\t... 30 more\n</pre>\n<hr/><a href=\"https://eclipse.org/jetty\">Powered by Jetty:// 9.4.53.v20231009</a><hr/>\n\n</body>\n</html>\n",
+  "contentType": "text/html;charset=iso-8859-1",
+  "name": "GET /consumers/match bad dob",
+  "status": 500
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:GetTradelineResponse><tl:tradelineId>7000002</tl:tradelineId><tl:consumerId>100001</tl:consumerId><tl:statusCd>X</tl:statusCd><tl:balancePence>132000</tl:balancePence><tl:disputeFlag>N</tl:disputeFlag></tl:GetTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP GetTradeline 7000002",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:GetTradelineResponse><tl:tradelineId>7000019</tl:tradelineId><tl:consumerId>100016</tl:consumerId><tl:statusCd>2</tl:statusCd><tl:balancePence>250000</tl:balancePence><tl:disputeFlag>Y</tl:disputeFlag></tl:GetTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP GetTradeline 7000019 (disputed)",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:GetTradelineResponse><tl:tradelineId>7000001</tl:tradelineId><tl:consumerId>100001</tl:consumerId><tl:statusCd>0</tl:statusCd><tl:balancePence>45000</tl:balancePence><tl:disputeFlag>N</tl:disputeFlag></tl:GetTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP GetTradeline no Header element",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:GetTradelineResponse><tl:tradelineId>7000003</tl:tradelineId><tl:consumerId>100002</tl:consumerId><tl:statusCd>X</tl:statusCd><tl:balancePence>61000</tl:balancePence><tl:disputeFlag>N</tl:disputeFlag></tl:GetTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP GetTradeline default namespace",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:GetTradelineResponse><tl:tradelineId>7000006</tl:tradelineId><tl:consumerId>100003</tl:consumerId><tl:statusCd>X</tl:statusCd><tl:balancePence>9500</tl:balancePence><tl:disputeFlag>N</tl:disputeFlag></tl:GetTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP GetTradeline un-namespaced children",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:GetTradelineResponse><tl:tradelineId>7000007</tl:tradelineId><tl:consumerId>100004</tl:consumerId><tl:statusCd>X</tl:statusCd><tl:balancePence>120000</tl:balancePence><tl:disputeFlag>N</tl:disputeFlag></tl:GetTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP GetTradeline with SOAPAction, no charset",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><soapenv:Fault><faultcode>soapenv:Client</faultcode><faultstring>Tradeline 1 not found</faultstring></soapenv:Fault></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP GetTradeline 1 (fault not found)",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><soapenv:Fault><faultcode>soapenv:Client</faultcode><faultstring>Unknown operation FooRequest</faultstring></soapenv:Fault></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP unknown operation (fault)",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><soapenv:Fault><faultcode>soapenv:Client</faultcode><faultstring>No operation in SOAP body</faultstring></soapenv:Fault></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP empty Body (fault)",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><soapenv:Fault><faultcode>soapenv:Client</faultcode><faultstring>No operation in SOAP body</faultstring></soapenv:Fault></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP no Body element (fault)",
+  "status": 200
+ },
+ {
+  "body": "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"/>\n<title>Error 500 org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NumberFormatException: null</title>\n</head>\n<body><h2>HTTP ERROR 500 org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NumberFormatException: null</h2>\n<table>\n<tr><th>URI:</th><td>/ws/TradelineMaintenance</td></tr>\n<tr><th>STATUS:</th><td>500</td></tr>\n<tr><th>MESSAGE:</th><td>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NumberFormatException: null</td></tr>\n<tr><th>SERVLET:</th><td>dispatcher</td></tr>\n<tr><th>CAUSED BY:</th><td>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NumberFormatException: null</td></tr>\n<tr><th>CAUSED BY:</th><td>java.lang.NumberFormatException: null</td></tr>\n</table>\n<h3>Caused by:</h3><pre>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NumberFormatException: null\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:707)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\n\tat org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)\n\tat org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:554)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)\n\tat org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)\n\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)\n\tat org.eclipse.jetty.server.Server.handle(Server.java:516)\n\tat org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487)\n\tat org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732)\n\tat org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479)\n\tat org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)\n\tat org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)\n\tat org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)\n\tat org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)\n\tat org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)\n\tat java.lang.Thread.run(Thread.java:750)\nCaused by: java.lang.NumberFormatException: null\n\tat java.lang.Long.parseLong(Long.java:552)\n\tat java.lang.Long.parseLong(Long.java:631)\n\tat com.ukcredit.creditfile.web.TradelineMaintenanceEndpoint.invoke(TradelineMaintenanceEndpoint.java:44)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:204)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:854)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:765)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)\n\t... 30 more\n</pre>\n<hr/><a href=\"https://eclipse.org/jetty\">Powered by Jetty:// 9.4.53.v20231009</a><hr/>\n\n</body>\n</html>\n",
+  "contentType": "text/html;charset=iso-8859-1",
+  "name": "SOAP unknown operation without tradelineId (500)",
+  "status": 500
+ },
+ {
+  "body": "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"/>\n<title>Error 500 org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NumberFormatException: null</title>\n</head>\n<body><h2>HTTP ERROR 500 org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NumberFormatException: null</h2>\n<table>\n<tr><th>URI:</th><td>/ws/TradelineMaintenance</td></tr>\n<tr><th>STATUS:</th><td>500</td></tr>\n<tr><th>MESSAGE:</th><td>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NumberFormatException: null</td></tr>\n<tr><th>SERVLET:</th><td>dispatcher</td></tr>\n<tr><th>CAUSED BY:</th><td>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NumberFormatException: null</td></tr>\n<tr><th>CAUSED BY:</th><td>java.lang.NumberFormatException: null</td></tr>\n</table>\n<h3>Caused by:</h3><pre>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NumberFormatException: null\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:707)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\n\tat org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)\n\tat org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:554)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)\n\tat org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)\n\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)\n\tat org.eclipse.jetty.server.Server.handle(Server.java:516)\n\tat org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487)\n\tat org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732)\n\tat org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479)\n\tat org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)\n\tat org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)\n\tat org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)\n\tat org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)\n\tat org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)\n\tat java.lang.Thread.run(Thread.java:750)\nCaused by: java.lang.NumberFormatException: null\n\tat java.lang.Long.parseLong(Long.java:552)\n\tat java.lang.Long.parseLong(Long.java:631)\n\tat com.ukcredit.creditfile.web.TradelineMaintenanceEndpoint.invoke(TradelineMaintenanceEndpoint.java:44)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:204)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:854)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:765)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)\n\t... 30 more\n</pre>\n<hr/><a href=\"https://eclipse.org/jetty\">Powered by Jetty:// 9.4.53.v20231009</a><hr/>\n\n</body>\n</html>\n",
+  "contentType": "text/html;charset=iso-8859-1",
+  "name": "SOAP GetTradeline missing tradelineId (500)",
+  "status": 500
+ },
+ {
+  "body": "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"/>\n<title>Error 500 org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 18; XML document structures must start and end within the same entity.</title>\n</head>\n<body><h2>HTTP ERROR 500 org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 18; XML document structures must start and end within the same entity.</h2>\n<table>\n<tr><th>URI:</th><td>/ws/TradelineMaintenance</td></tr>\n<tr><th>STATUS:</th><td>500</td></tr>\n<tr><th>MESSAGE:</th><td>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 18; XML document structures must start and end within the same entity.</td></tr>\n<tr><th>SERVLET:</th><td>dispatcher</td></tr>\n<tr><th>CAUSED BY:</th><td>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 18; XML document structures must start and end within the same entity.</td></tr>\n<tr><th>CAUSED BY:</th><td>org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 18; XML document structures must start and end within the same entity.</td></tr>\n</table>\n<h3>Caused by:</h3><pre>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 18; XML document structures must start and end within the same entity.\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:707)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:790)\n\tat org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)\n\tat org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:554)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)\n\tat org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)\n\tat org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355)\n\tat org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)\n\tat org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)\n\tat org.eclipse.jetty.server.Server.handle(Server.java:516)\n\tat org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487)\n\tat org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732)\n\tat org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479)\n\tat org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)\n\tat org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)\n\tat org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)\n\tat org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)\n\tat org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)\n\tat org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)\n\tat org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)\n\tat java.lang.Thread.run(Thread.java:750)\nCaused by: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 18; XML document structures must start and end within the same entity.\n\tat com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:257)\n\tat com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:338)\n\tat javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:121)\n\tat com.ukcredit.creditfile.web.TradelineMaintenanceEndpoint.invoke(TradelineMaintenanceEndpoint.java:38)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:204)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:854)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:765)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)\n\t... 30 more\n</pre>\n<hr/><a href=\"https://eclipse.org/jetty\">Powered by Jetty:// 9.4.53.v20231009</a><hr/>\n\n</body>\n</html>\n",
+  "contentType": "text/html;charset=iso-8859-1",
+  "name": "SOAP malformed XML (500)",
+  "status": 500
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:GetTradelineResponse><tl:tradelineId>7000002</tl:tradelineId><tl:consumerId>100001</tl:consumerId><tl:statusCd>X</tl:statusCd><tl:balancePence>132000</tl:balancePence><tl:disputeFlag>N</tl:disputeFlag></tl:GetTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP GetTradeline with DOCTYPE (XXE hardening)",
+  "status": 200
+ },
+ {
+  "body": "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"/>\n<title>Error 405 Request method &apos;GET&apos; not supported</title>\n</head>\n<body><h2>HTTP ERROR 405 Request method &apos;GET&apos; not supported</h2>\n<table>\n<tr><th>URI:</th><td>/ws/TradelineMaintenance</td></tr>\n<tr><th>STATUS:</th><td>405</td></tr>\n<tr><th>MESSAGE:</th><td>Request method &apos;GET&apos; not supported</td></tr>\n<tr><th>SERVLET:</th><td>dispatcher</td></tr>\n</table>\n<hr/><a href=\"https://eclipse.org/jetty\">Powered by Jetty:// 9.4.53.v20231009</a><hr/>\n\n</body>\n</html>\n",
+  "contentType": "text/html;charset=iso-8859-1",
+  "name": "GET /ws/TradelineMaintenance (405)",
+  "status": 405
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:SetDisputeFlagResponse><tl:result>OK</tl:result></tl:SetDisputeFlagResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP SetDisputeFlag 7000001 Y",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:SetDisputeFlagResponse><tl:result>NOT_FOUND</tl:result></tl:SetDisputeFlagResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP SetDisputeFlag 1 (NOT_FOUND)",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:GetTradelineResponse><tl:tradelineId>7000001</tl:tradelineId><tl:consumerId>100001</tl:consumerId><tl:statusCd>0</tl:statusCd><tl:balancePence>45000</tl:balancePence><tl:disputeFlag>Y</tl:disputeFlag></tl:GetTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP GetTradeline 7000001 after SetDisputeFlag",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:AmendTradelineResponse><tl:result>OK</tl:result></tl:AmendTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP AmendTradeline 7000004 status+balance",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:GetTradelineResponse><tl:tradelineId>7000004</tl:tradelineId><tl:consumerId>100002</tl:consumerId><tl:statusCd>1</tl:statusCd><tl:balancePence>12345</tl:balancePence><tl:disputeFlag>N</tl:disputeFlag></tl:GetTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP GetTradeline 7000004 after amend",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:AmendTradelineResponse><tl:result>OK</tl:result></tl:AmendTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP AmendTradeline 7000008 same status (no-op)",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:AmendTradelineResponse><tl:result>OK</tl:result></tl:AmendTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP AmendTradeline 7000005 delete",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 3,
+     "addrId": 500003,
+     "from": "2005-06-01",
+     "line1": "88 Victoria Road",
+     "postcode": "CF5 1JR",
+     "source": "ERL",
+     "to": null,
+     "town": "Cardiff"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100003,
+    "dob": "1969-11-02",
+    "firstName": "Owen",
+    "matchKey": "CASTELLANE|19691102|O",
+    "middleName": "Llyr",
+    "surname": "Castellane",
+    "title": "MR"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500003,
+     "erId": 3,
+     "from": "2005-06-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "UT",
+     "balanceDisplay": "95.00",
+     "balancePence": 9500,
+     "closeDate": null,
+     "creditLimit": null,
+     "disputed": false,
+     "lender": "UTL112",
+     "lenderName": "Brightwater Energy",
+     "mappedStatus": "ARRANGEMENT",
+     "openDate": "2010-09-01",
+     "paymentProfile": "XXX000000000000000000000",
+     "revolving": false,
+     "statusCd": "X",
+     "statusDate": "2014-04-01",
+     "trdlnId": 7000006
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100003 after delete",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:AmendTradelineResponse><tl:result>NOT_FOUND</tl:result></tl:AmendTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP AmendTradeline 9 (NOT_FOUND)",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:AmendTradelineResponse><tl:result>OK</tl:result></tl:AmendTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP AmendTradeline 7000010 non-ASCII operator, UTF-8",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:AmendTradelineResponse><tl:result>OK</tl:result></tl:AmendTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP AmendTradeline 7000011 non-ASCII operator, latin-1 body no charset",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 2,
+     "addrId": 500002,
+     "from": "2014-09-01",
+     "line1": "3 Orchard Close",
+     "postcode": "NR2 3HP",
+     "source": "CAI",
+     "to": null,
+     "town": "Norwich"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100002,
+    "dob": "1981-07-30",
+    "firstName": "Yasmin",
+    "matchKey": "ACHTERBERG|19810730|Y",
+    "middleName": null,
+    "surname": "Achterberg",
+    "title": "MS"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500002,
+     "erId": 2,
+     "from": "2015-01-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "SC",
+     "balanceDisplay": "610.00",
+     "balancePence": 61000,
+     "closeDate": null,
+     "creditLimit": 800,
+     "disputed": false,
+     "lender": "RTL031",
+     "lenderName": "Hollins & Pike Retail Finance",
+     "mappedStatus": "ARRANGEMENT",
+     "openDate": "2015-03-01",
+     "paymentProfile": "XXX000000000000000000000",
+     "revolving": true,
+     "statusCd": "X",
+     "statusDate": "2016-06-01",
+     "trdlnId": 7000003
+    },
+    {
+     "accountType": "MO",
+     "balanceDisplay": "123.45",
+     "balancePence": 12345,
+     "closeDate": null,
+     "creditLimit": null,
+     "disputed": false,
+     "lender": "TEL009",
+     "lenderName": "Northline Mobile",
+     "mappedStatus": "ARREARS_1",
+     "openDate": "2019-01-10",
+     "paymentProfile": "000000000000000000000000",
+     "revolving": false,
+     "statusCd": "1",
+     "statusDate": "<TODAY>",
+     "trdlnId": 7000004
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100002 after amend",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "VPOOR",
+   "cnsmrId": 100001,
+   "modelVer": "UKS3",
+   "reasons": [
+    "DEFAULT",
+    "DSPT_SUPPRESSED",
+    "UTIL_75"
+   ],
+   "revolvingBalance": 1320,
+   "revolvingLimit": 1500,
+   "score": 497,
+   "utilisationPct": 88
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100001 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "POOR",
+   "cnsmrId": 100002,
+   "modelVer": "UKS3",
+   "reasons": [
+    "ARRANGEMENT",
+    "ARREARS",
+    "UTIL_75"
+   ],
+   "revolvingBalance": 610,
+   "revolvingLimit": 800,
+   "score": 572,
+   "utilisationPct": 76
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100002 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "FAIR",
+   "cnsmrId": 100003,
+   "modelVer": "UKS3",
+   "reasons": [
+    "ARRANGEMENT"
+   ],
+   "revolvingBalance": null,
+   "revolvingLimit": null,
+   "score": 617,
+   "utilisationPct": null
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100003 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "FAIR",
+   "cnsmrId": 100004,
+   "modelVer": "UKS3",
+   "reasons": [
+    "ARRANGEMENT"
+   ],
+   "revolvingBalance": 1200,
+   "revolvingLimit": 3000,
+   "score": 637,
+   "utilisationPct": 40
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100004 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "FAIR",
+   "cnsmrId": 100005,
+   "modelVer": "UKS3",
+   "reasons": [
+    "UTIL_75"
+   ],
+   "revolvingBalance": 750,
+   "revolvingLimit": 1000,
+   "score": 622,
+   "utilisationPct": 75
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100005 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "GOOD",
+   "cnsmrId": 100006,
+   "modelVer": "UKS3",
+   "reasons": [],
+   "revolvingBalance": 302,
+   "revolvingLimit": 1000,
+   "score": 677,
+   "utilisationPct": 30
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100006 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "GOOD",
+   "cnsmrId": 100007,
+   "modelVer": "UKS3",
+   "reasons": [],
+   "revolvingBalance": 2,
+   "revolvingLimit": 1002,
+   "score": 672,
+   "utilisationPct": 0
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100007 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "GOOD",
+   "cnsmrId": 100008,
+   "modelVer": "UKS3",
+   "reasons": [],
+   "revolvingBalance": 120,
+   "revolvingLimit": 500,
+   "score": 672,
+   "utilisationPct": 24
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100008 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "GOOD",
+   "cnsmrId": 100009,
+   "modelVer": "UKS3",
+   "reasons": [],
+   "revolvingBalance": null,
+   "revolvingLimit": null,
+   "score": 652,
+   "utilisationPct": null
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100009 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "FAIR",
+   "cnsmrId": 100010,
+   "modelVer": "UKS3",
+   "reasons": [
+    "NOT_ON_ER"
+   ],
+   "revolvingBalance": null,
+   "revolvingLimit": null,
+   "score": 602,
+   "utilisationPct": null
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100010 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "GOOD",
+   "cnsmrId": 100011,
+   "modelVer": "UKS3",
+   "reasons": [],
+   "revolvingBalance": 0,
+   "revolvingLimit": 250,
+   "score": 672,
+   "utilisationPct": 0
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100011 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "GOOD",
+   "cnsmrId": 100012,
+   "modelVer": "UKS3",
+   "reasons": [
+    "ARREARS"
+   ],
+   "revolvingBalance": 640,
+   "revolvingLimit": 5000,
+   "score": 652,
+   "utilisationPct": 12
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100012 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "GOOD",
+   "cnsmrId": 100013,
+   "modelVer": "UKS3",
+   "reasons": [],
+   "revolvingBalance": 300,
+   "revolvingLimit": 1200,
+   "score": 657,
+   "utilisationPct": 25
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100013 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "VPOOR",
+   "cnsmrId": 100014,
+   "modelVer": "UKS3",
+   "reasons": [
+    "ARREARS",
+    "CCJ_UNSAT",
+    "CCJ_SAT",
+    "NOT_ON_ER"
+   ],
+   "revolvingBalance": null,
+   "revolvingLimit": null,
+   "score": 342,
+   "utilisationPct": null
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100014 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "NOSCORE",
+   "cnsmrId": 100015,
+   "modelVer": "UKS3",
+   "reasons": [
+    "THIN_FILE"
+   ],
+   "revolvingBalance": null,
+   "revolvingLimit": null,
+   "score": null,
+   "utilisationPct": null
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100015 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "NOSCORE",
+   "cnsmrId": 100016,
+   "modelVer": "UKS3",
+   "reasons": [
+    "DSPT_SUPPRESSED",
+    "THIN_FILE"
+   ],
+   "revolvingBalance": null,
+   "revolvingLimit": null,
+   "score": null,
+   "utilisationPct": null
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100016 (via credit-file)",
+  "status": 200
+ },
+ {
+  "body": {
+   "chnlCd": "WEB",
+   "cnsmrId": 100008,
+   "correspondence": [
+    {
+     "chnlCd": "WEB",
+     "sentTs": "<NOW>",
+     "tmplCd": "ACK01"
+    }
+   ],
+   "dsptId": 40014,
+   "events": [
+    {
+     "evtId": 26,
+     "evtTs": "<NOW>",
+     "evtTypCd": "OPENED",
+     "note": "region=EW",
+     "oprId": null
+    }
+   ],
+   "outcomeCd": null,
+   "pubRecId": null,
+   "rcvdTs": "2024-12-23 09:00:00",
+   "rslvdBy": null,
+   "rslvdTs": null,
+   "rsnCd": "WRONGSTS",
+   "slaDueDt": "2025-01-23",
+   "stsCd": "OPEN",
+   "trdlnId": 7000012
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "dispute-service POST /disputes (SetDisputeFlag Y)",
+  "status": 201
+ },
+ {
+  "body": {
+   "chnlCd": "WEB",
+   "cnsmrId": 100016,
+   "correspondence": [
+    {
+     "chnlCd": "WEB",
+     "sentTs": "2024-12-20 18:00:00",
+     "tmplCd": "ACK01"
+    },
+    {
+     "chnlCd": "WEB",
+     "sentTs": "<NOW>",
+     "tmplCd": "RES01"
+    }
+   ],
+   "dsptId": 40001,
+   "events": [
+    {
+     "evtId": 1,
+     "evtTs": "2024-12-20 10:15:00",
+     "evtTypCd": "OPENED",
+     "note": "Customer says arrears were cleared in October",
+     "oprId": null
+    },
+    {
+     "evtId": 27,
+     "evtTs": "<NOW>",
+     "evtTypCd": "CLOSED",
+     "note": "outcome=AMEND",
+     "oprId": "OPS0001"
+    }
+   ],
+   "outcomeCd": "AMEND",
+   "pubRecId": null,
+   "rcvdTs": "2024-12-20 10:15:00",
+   "rslvdBy": "OPS0001",
+   "rslvdTs": "<NOW>",
+   "rsnCd": "WRONGSTS",
+   "slaDueDt": "2025-01-22",
+   "stsCd": "CLOSED",
+   "trdlnId": 7000019
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "dispute-service POST /disputes/40001/resolve AMEND",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:GetTradelineResponse><tl:tradelineId>7000012</tl:tradelineId><tl:consumerId>100008</tl:consumerId><tl:statusCd>0</tl:statusCd><tl:balancePence>12000</tl:balancePence><tl:disputeFlag>Y</tl:disputeFlag></tl:GetTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP GetTradeline 7000012 after dispute open",
+  "status": 200
+ },
+ {
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:GetTradelineResponse><tl:tradelineId>7000019</tl:tradelineId><tl:consumerId>100016</tl:consumerId><tl:statusCd>0</tl:statusCd><tl:balancePence>0</tl:balancePence><tl:disputeFlag>N</tl:disputeFlag></tl:GetTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "contentType": "text/xml;charset=utf-8",
+  "name": "SOAP GetTradeline 7000019 after dispute resolve",
+  "status": 200
+ },
+ {
+  "body": {
+   "addresses": [
+    {
+     "addrHistId": 19,
+     "addrId": 500017,
+     "from": "2013-03-01",
+     "line1": "55 High Street",
+     "postcode": "RG4 8AA",
+     "source": "ERL",
+     "to": null,
+     "town": "Reading"
+    }
+   ],
+   "aliases": [],
+   "consumer": {
+    "cnsmrId": 100016,
+    "dob": "1977-02-14",
+    "firstName": "Rajesh",
+    "matchKey": "MENON|19770214|R",
+    "middleName": null,
+    "surname": "Menon",
+    "title": "MR"
+   },
+   "electoralRoll": [
+    {
+     "addrId": 500017,
+     "erId": 14,
+     "from": "2013-03-01",
+     "to": null
+    }
+   ],
+   "notices": [],
+   "publicRecords": [],
+   "searches": [],
+   "tradelines": [
+    {
+     "accountType": "CC",
+     "balanceDisplay": "0.00",
+     "balancePence": 0,
+     "closeDate": null,
+     "creditLimit": 4000,
+     "disputed": false,
+     "lender": "BKA001",
+     "lenderName": "Albion Mutual Bank",
+     "mappedStatus": "UP_TO_DATE",
+     "openDate": "2014-07-01",
+     "paymentProfile": "222000000000000000000000",
+     "revolving": true,
+     "statusCd": "0",
+     "statusDate": "<TODAY>",
+     "trdlnId": 7000019
+    }
+   ]
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "GET /creditfile/100016 after dispute resolve",
+  "status": 200
+ },
+ {
+  "body": {
+   "asOf": "2024-12-31",
+   "band": "GOOD",
+   "cnsmrId": 100016,
+   "modelVer": "UKS3",
+   "reasons": [],
+   "revolvingBalance": 0,
+   "revolvingLimit": 4000,
+   "score": 672,
+   "utilisationPct": 0
+  },
+  "contentType": "application/json;charset=utf-8",
+  "name": "score-service GET /score/100016 after resolve",
+  "status": 200
+ },
+ {
+  "body": [
+   "AUD_ID | ENTITY_NM         | ENTITY_ID | ACTN_CD  | SRC_SVC             | DTL_TXT",
+   "1      | ACCOUNT_TRADELINE | 7000001   | DSPT_FLG | credit-file-service | DSPT_FLG=Y",
+   "2      | ACCOUNT_TRADELINE | 7000004   | AMEND    | credit-file-service | opr=OPS0002 ACCT_STS_CD 0->1 CURR_BAL_PNC 2400->12345",
+   "3      | ACCOUNT_TRADELINE | 7000008   | AMEND    | credit-file-service | opr=OPS0002",
+   "4      | ACCOUNT_TRADELINE | 7000005   | AMEND    | credit-file-service | opr=OPS0002 DEL_FLG=Y",
+   "5      | ACCOUNT_TRADELINE | 7000010   | AMEND    | credit-file-service | opr=OPÉ01 CURR_BAL_PNC 44900->100",
+   "6      | ACCOUNT_TRADELINE | 7000011   | AMEND    | credit-file-service | opr=OPÉ02 CURR_BAL_PNC 50050->200",
+   "7      | ACCOUNT_TRADELINE | 7000012   | DSPT_FLG | credit-file-service | DSPT_FLG=Y",
+   "8      | ACCOUNT_TRADELINE | 7000019   | AMEND    | credit-file-service | opr=OPS0001 ACCT_STS_CD 2->0 CURR_BAL_PNC 250000->0",
+   "9      | ACCOUNT_TRADELINE | 7000019   | DSPT_FLG | credit-file-service | DSPT_FLG=N"
+  ],
+  "contentType": "db",
+  "name": "DB AUDIT_LOG rows",
+  "status": 0
+ },
+ {
+  "body": [
+   "TRDLN_ID | ACCT_STS_CD | ACCT_STS_DT | CURR_BAL_PNC | DSPT_FLG | DEL_FLG | UPD",
+   "7000001  | 0           | 2024-11-30  | 45000        | Y        | N       | Y",
+   "7000004  | 1           | <TODAY>  | 12345        | N        | N       | Y",
+   "7000005  | X           | 2014-03-31  | 18000        | N        | Y       | Y",
+   "7000008  | 0           | 2024-11-30  | 74950        | N        | N       | N",
+   "7000010  | 0           | 2024-11-30  | 100          | N        | N       | Y",
+   "7000011  | 0           | 2024-11-30  | 200          | N        | N       | Y",
+   "7000012  | 0           | 2024-11-30  | 12000        | Y        | N       | Y",
+   "7000019  | 0           | <TODAY>  | 0            | N        | N       | Y"
+  ],
+  "contentType": "db",
+  "name": "DB ACCOUNT_TRADELINE touched rows",
+  "status": 0
+ }
+]

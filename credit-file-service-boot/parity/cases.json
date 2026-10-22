@@ -1,0 +1,653 @@
+[
+ {
+  "name": "GET /creditfile/100001",
+  "method": "GET",
+  "path": "/creditfile/100001"
+ },
+ {
+  "name": "GET /creditfile/100002",
+  "method": "GET",
+  "path": "/creditfile/100002"
+ },
+ {
+  "name": "GET /creditfile/100003",
+  "method": "GET",
+  "path": "/creditfile/100003"
+ },
+ {
+  "name": "GET /creditfile/100004",
+  "method": "GET",
+  "path": "/creditfile/100004"
+ },
+ {
+  "name": "GET /creditfile/100005",
+  "method": "GET",
+  "path": "/creditfile/100005"
+ },
+ {
+  "name": "GET /creditfile/100006",
+  "method": "GET",
+  "path": "/creditfile/100006"
+ },
+ {
+  "name": "GET /creditfile/100007",
+  "method": "GET",
+  "path": "/creditfile/100007"
+ },
+ {
+  "name": "GET /creditfile/100008",
+  "method": "GET",
+  "path": "/creditfile/100008"
+ },
+ {
+  "name": "GET /creditfile/100009",
+  "method": "GET",
+  "path": "/creditfile/100009"
+ },
+ {
+  "name": "GET /creditfile/100010",
+  "method": "GET",
+  "path": "/creditfile/100010"
+ },
+ {
+  "name": "GET /creditfile/100011",
+  "method": "GET",
+  "path": "/creditfile/100011"
+ },
+ {
+  "name": "GET /creditfile/100012",
+  "method": "GET",
+  "path": "/creditfile/100012"
+ },
+ {
+  "name": "GET /creditfile/100013",
+  "method": "GET",
+  "path": "/creditfile/100013"
+ },
+ {
+  "name": "GET /creditfile/100014",
+  "method": "GET",
+  "path": "/creditfile/100014"
+ },
+ {
+  "name": "GET /creditfile/100015",
+  "method": "GET",
+  "path": "/creditfile/100015"
+ },
+ {
+  "name": "GET /creditfile/100016",
+  "method": "GET",
+  "path": "/creditfile/100016"
+ },
+ {
+  "name": "GET /creditfile/100020",
+  "method": "GET",
+  "path": "/creditfile/100020"
+ },
+ {
+  "name": "GET /creditfile/999999 (unknown)",
+  "method": "GET",
+  "path": "/creditfile/999999"
+ },
+ {
+  "name": "GET /creditfile/abc (bad id)",
+  "method": "GET",
+  "path": "/creditfile/abc",
+  "intentional": {
+   "fields": [
+    "contentType",
+    "body"
+   ],
+   "reason": "framework error page: Jetty HTML -> Spring Boot JSON error body; status unchanged"
+  }
+ },
+ {
+  "name": "GET /creditfile/100001/ (trailing slash)",
+  "method": "GET",
+  "path": "/creditfile/100001/"
+ },
+ {
+  "name": "GET /creditfile/100001.json (suffix match)",
+  "method": "GET",
+  "path": "/creditfile/100001.json"
+ },
+ {
+  "name": "POST /creditfile/100001 (wrong method)",
+  "method": "POST",
+  "path": "/creditfile/100001",
+  "headers": {
+   "Content-Type": "application/json"
+  },
+  "body": "{}",
+  "intentional": {
+   "fields": [
+    "contentType",
+    "body"
+   ],
+   "reason": "framework error page: Jetty HTML -> Spring Boot JSON error body; status unchanged"
+  }
+ },
+ {
+  "name": "GET /creditfile/100001 Accept: application/xml",
+  "method": "GET",
+  "path": "/creditfile/100001",
+  "headers": {
+   "Accept": "application/xml"
+  },
+  "intentional": {
+   "fields": [
+    "contentType",
+    "body"
+   ],
+   "reason": "framework error page: Jetty HTML -> Spring Boot JSON error body; status unchanged"
+  }
+ },
+ {
+  "name": "GET /consumers/match Siobhan O Briain (unaccented)",
+  "method": "GET",
+  "path": "/consumers/match?firstName=Siobhan&surname=O%20Briain&dob=1984-02-29"
+ },
+ {
+  "name": "GET /consumers/match Siobhan OBriain (no space)",
+  "method": "GET",
+  "path": "/consumers/match?firstName=Siobhan&surname=OBriain&dob=1984-02-29"
+ },
+ {
+  "name": "GET /consumers/match Siobhan O'Briain (apostrophe)",
+  "method": "GET",
+  "path": "/consumers/match?firstName=Siobhan&surname=O%27Briain&dob=1984-02-29"
+ },
+ {
+  "name": "GET /consumers/match Siobhán Ó Briain (accented)",
+  "method": "GET",
+  "path": "/consumers/match?firstName=Siobh%C3%A1n&surname=%C3%93%20Briain&dob=1984-02-29"
+ },
+ {
+  "name": "GET /consumers/match Renee Dubois Marchand",
+  "method": "GET",
+  "path": "/consumers/match?firstName=Renee&surname=Dubois%20Marchand&dob=1966-04-21"
+ },
+ {
+  "name": "GET /consumers/match Lukasz Wisniewski",
+  "method": "GET",
+  "path": "/consumers/match?firstName=Lukasz&surname=Wisniewski&dob=1992-08-08"
+ },
+ {
+  "name": "GET /consumers/match Margaret Strauss (sharp s)",
+  "method": "GET",
+  "path": "/consumers/match?firstName=Margaret&surname=Strauss&dob=1958-10-10"
+ },
+ {
+  "name": "GET /consumers/match Margaret STRAUSS upper",
+  "method": "GET",
+  "path": "/consumers/match?firstName=MARGARET&surname=STRAUSS&dob=1958-10-10"
+ },
+ {
+  "name": "GET /consumers/match X Pryce (initial)",
+  "method": "GET",
+  "path": "/consumers/match?firstName=X&surname=Pryce&dob=1975-03-12"
+ },
+ {
+  "name": "GET /consumers/match Xan Pryce (short form)",
+  "method": "GET",
+  "path": "/consumers/match?firstName=Xan&surname=Pryce&dob=1975-03-12"
+ },
+ {
+  "name": "GET /consumers/match Xa Pryce (2-char, no match)",
+  "method": "GET",
+  "path": "/consumers/match?firstName=Xa&surname=Pryce&dob=1975-03-12"
+ },
+ {
+  "name": "GET /consumers/match Xander Pryce wrong dob",
+  "method": "GET",
+  "path": "/consumers/match?firstName=Xander&surname=Pryce&dob=1975-03-13"
+ },
+ {
+  "name": "GET /consumers/match missing dob",
+  "method": "GET",
+  "path": "/consumers/match?firstName=X&surname=Pryce",
+  "intentional": {
+   "fields": [
+    "contentType",
+    "body"
+   ],
+   "reason": "framework error page: Jetty HTML -> Spring Boot JSON error body; status unchanged"
+  }
+ },
+ {
+  "name": "GET /consumers/match bad dob",
+  "method": "GET",
+  "path": "/consumers/match?firstName=X&surname=Pryce&dob=12/03/1975",
+  "intentional": {
+   "fields": [
+    "contentType",
+    "body"
+   ],
+   "reason": "framework error page: Jetty HTML -> Spring Boot JSON error body; status unchanged"
+  }
+ },
+ {
+  "name": "SOAP GetTradeline 7000002",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:GetTradelineRequest><tl:tradelineId>7000002</tl:tradelineId></tl:GetTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP GetTradeline 7000019 (disputed)",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:GetTradelineRequest><tl:tradelineId>7000019</tl:tradelineId></tl:GetTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP GetTradeline no Header element",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:GetTradelineRequest><tl:tradelineId>7000001</tl:tradelineId></tl:GetTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP GetTradeline default namespace",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Envelope xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\"><Body><GetTradelineRequest xmlns=\"urn:ukcredit:tradeline:v1\"><tradelineId>7000003</tradelineId></GetTradelineRequest></Body></Envelope>"
+ },
+ {
+  "name": "SOAP GetTradeline un-namespaced children",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:GetTradelineRequest><tradelineId> 7000006 </tradelineId></tl:GetTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP GetTradeline with SOAPAction, no charset",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml",
+   "SOAPAction": "urn:ukcredit:tradeline:v1:GetTradeline"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:GetTradelineRequest><tl:tradelineId>7000007</tl:tradelineId></tl:GetTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP GetTradeline 1 (fault not found)",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:GetTradelineRequest><tl:tradelineId>1</tl:tradelineId></tl:GetTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP unknown operation (fault)",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:FooRequest><tl:tradelineId>7000002</tl:tradelineId></tl:FooRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP empty Body (fault)",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP no Body element (fault)",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"/>"
+ },
+ {
+  "name": "SOAP unknown operation without tradelineId (500)",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:FooRequest/></soapenv:Body></soapenv:Envelope>",
+  "intentional": {
+   "fields": [
+    "contentType",
+    "body"
+   ],
+   "reason": "framework error page: Jetty HTML -> Spring Boot JSON error body; status unchanged"
+  }
+ },
+ {
+  "name": "SOAP GetTradeline missing tradelineId (500)",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:GetTradelineRequest/></soapenv:Body></soapenv:Envelope>",
+  "intentional": {
+   "fields": [
+    "contentType",
+    "body"
+   ],
+   "reason": "framework error page: Jetty HTML -> Spring Boot JSON error body; status unchanged"
+  }
+ },
+ {
+  "name": "SOAP malformed XML (500)",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope",
+  "intentional": {
+   "fields": [
+    "contentType",
+    "body"
+   ],
+   "reason": "framework error page: Jetty HTML -> Spring Boot JSON error body; status unchanged"
+  }
+ },
+ {
+  "name": "SOAP GetTradeline with DOCTYPE (XXE hardening)",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<?xml version=\"1.0\"?><!DOCTYPE x [<!ENTITY id \"7000002\">]><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:GetTradelineRequest><tl:tradelineId>&id;</tl:tradelineId></tl:GetTradelineRequest></soapenv:Body></soapenv:Envelope>",
+  "intentional": {
+   "fields": [
+    "status",
+    "contentType",
+    "body"
+   ],
+   "reason": "DTDs rejected (XXE hardening; SOAP 1.1 forbids a DOCTYPE) - legacy resolved the entity, Boot returns 500"
+  }
+ },
+ {
+  "name": "GET /ws/TradelineMaintenance (405)",
+  "method": "GET",
+  "path": "/ws/TradelineMaintenance",
+  "intentional": {
+   "fields": [
+    "contentType",
+    "body"
+   ],
+   "reason": "framework error page: Jetty HTML -> Spring Boot JSON error body; status unchanged"
+  }
+ },
+ {
+  "name": "SOAP SetDisputeFlag 7000001 Y",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:SetDisputeFlagRequest><tl:tradelineId>7000001</tl:tradelineId><tl:flag>Y</tl:flag></tl:SetDisputeFlagRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP SetDisputeFlag 1 (NOT_FOUND)",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:SetDisputeFlagRequest><tl:tradelineId>1</tl:tradelineId><tl:flag>Y</tl:flag></tl:SetDisputeFlagRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP GetTradeline 7000001 after SetDisputeFlag",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:GetTradelineRequest><tl:tradelineId>7000001</tl:tradelineId></tl:GetTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP AmendTradeline 7000004 status+balance",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:AmendTradelineRequest><tl:tradelineId>7000004</tl:tradelineId><tl:statusCd>1</tl:statusCd><tl:balancePence>12345</tl:balancePence><tl:delete>false</tl:delete><tl:operatorId>OPS0002</tl:operatorId></tl:AmendTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP GetTradeline 7000004 after amend",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:GetTradelineRequest><tl:tradelineId>7000004</tl:tradelineId></tl:GetTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP AmendTradeline 7000008 same status (no-op)",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:AmendTradelineRequest><tl:tradelineId>7000008</tl:tradelineId><tl:statusCd>0</tl:statusCd><tl:delete>false</tl:delete><tl:operatorId>OPS0002</tl:operatorId></tl:AmendTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP AmendTradeline 7000005 delete",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:AmendTradelineRequest><tl:tradelineId>7000005</tl:tradelineId><tl:delete>true</tl:delete><tl:operatorId>OPS0002</tl:operatorId></tl:AmendTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "GET /creditfile/100003 after delete",
+  "method": "GET",
+  "path": "/creditfile/100003"
+ },
+ {
+  "name": "SOAP AmendTradeline 9 (NOT_FOUND)",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:AmendTradelineRequest><tl:tradelineId>9</tl:tradelineId><tl:statusCd>1</tl:statusCd><tl:delete>false</tl:delete><tl:operatorId>OPS0002</tl:operatorId></tl:AmendTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP AmendTradeline 7000010 non-ASCII operator, UTF-8",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:AmendTradelineRequest><tl:tradelineId>7000010</tl:tradelineId><tl:balancePence>100</tl:balancePence><tl:delete>false</tl:delete><tl:operatorId>OPÉ01</tl:operatorId></tl:AmendTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP AmendTradeline 7000011 non-ASCII operator, latin-1 body no charset",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:AmendTradelineRequest><tl:tradelineId>7000011</tl:tradelineId><tl:balancePence>200</tl:balancePence><tl:delete>false</tl:delete><tl:operatorId>OPÉ02</tl:operatorId></tl:AmendTradelineRequest></soapenv:Body></soapenv:Envelope>",
+  "bodyEncoding": "latin-1"
+ },
+ {
+  "name": "GET /creditfile/100002 after amend",
+  "method": "GET",
+  "path": "/creditfile/100002"
+ },
+ {
+  "name": "score-service GET /score/100001 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100001?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100002 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100002?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100003 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100003?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100004 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100004?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100005 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100005?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100006 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100006?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100007 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100007?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100008 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100008?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100009 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100009?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100010 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100010?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100011 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100011?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100012 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100012?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100013 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100013?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100014 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100014?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100015 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100015?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "score-service GET /score/100016 (via credit-file)",
+  "method": "GET",
+  "path": "/score/100016?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "dispute-service POST /disputes (SetDisputeFlag Y)",
+  "target": "dispute",
+  "method": "POST",
+  "path": "/disputes",
+  "headers": {
+   "Content-Type": "application/json"
+  },
+  "body": "{\"cnsmrId\": 100008, \"trdlnId\": 7000012, \"rsnCd\": \"WRONGSTS\", \"rcvdTs\": \"2024-12-23T09:00:00\"}"
+ },
+ {
+  "name": "dispute-service POST /disputes/40001/resolve AMEND",
+  "target": "dispute",
+  "method": "POST",
+  "path": "/disputes/40001/resolve",
+  "headers": {
+   "Content-Type": "application/json"
+  },
+  "body": "{\"outcome\": \"AMEND\", \"operatorId\": \"OPS0001\", \"statusCd\": \"0\", \"balancePence\": 0}"
+ },
+ {
+  "name": "SOAP GetTradeline 7000012 after dispute open",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:GetTradelineRequest><tl:tradelineId>7000012</tl:tradelineId></tl:GetTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "SOAP GetTradeline 7000019 after dispute resolve",
+  "method": "POST",
+  "path": "/ws/TradelineMaintenance",
+  "headers": {
+   "Content-Type": "text/xml;charset=UTF-8"
+  },
+  "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Header/><soapenv:Body><tl:GetTradelineRequest><tl:tradelineId>7000019</tl:tradelineId></tl:GetTradelineRequest></soapenv:Body></soapenv:Envelope>"
+ },
+ {
+  "name": "GET /creditfile/100016 after dispute resolve",
+  "method": "GET",
+  "path": "/creditfile/100016"
+ },
+ {
+  "name": "score-service GET /score/100016 after resolve",
+  "method": "GET",
+  "path": "/score/100016?asOf=2024-12-31",
+  "target": "score"
+ },
+ {
+  "name": "DB AUDIT_LOG rows",
+  "target": "db",
+  "sql": "SELECT AUD_ID, ENTITY_NM, ENTITY_ID, ACTN_CD, SRC_SVC, DTL_TXT FROM AUDIT_LOG ORDER BY AUD_ID"
+ },
+ {
+  "name": "DB ACCOUNT_TRADELINE touched rows",
+  "target": "db",
+  "sql": "SELECT TRDLN_ID, ACCT_STS_CD, ACCT_STS_DT, CURR_BAL_PNC, DSPT_FLG, DEL_FLG, CASE WHEN UPD_TS IS NULL THEN 'N' ELSE 'Y' END AS UPD FROM ACCOUNT_TRADELINE WHERE TRDLN_ID IN (7000001,7000004,7000005,7000008,7000010,7000011,7000012,7000019) ORDER BY TRDLN_ID"
+ }
+]

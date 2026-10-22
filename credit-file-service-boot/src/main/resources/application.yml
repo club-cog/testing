@@ -1,0 +1,47 @@
+# Environment variables win; -Djdbc.* (scripts/env-postgres.sh style) is honoured for drop-in use with the legacy scripts.
+spring:
+  application:
+    name: credit-file-service
+  profiles:
+    default: h2
+  datasource:
+    url: ${DB_URL:${jdbc.url:${creditfile.db.default-url}}}
+    username: ${DB_USERNAME:${jdbc.username:ukcredit}}
+    password: ${DB_PASSWORD:${jdbc.password:ukcredit}}
+    hikari:
+      pool-name: creditfile
+      maximum-pool-size: ${DB_POOL_MAX:${jdbc.pool.maxActive:10}}
+  jackson:
+    serialization:
+      indent-output: false
+
+server:
+  port: ${PORT:9081}
+  shutdown: graceful
+  servlet:
+    encoding:
+      # legacy Jetty had no CharacterEncodingFilter; SOAP request charset is resolved in TradelineMaintenanceEndpoint
+      enabled: false
+  error:
+    include-message: never
+    include-stacktrace: never
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: never
+      group:
+        # readiness also needs the database; liveness never does, so a DB outage cannot restart pods
+        readiness:
+          include: readinessState,db
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true

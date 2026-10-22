@@ -1,0 +1,107 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: credit-file-service
+  labels:
+    app: credit-file-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: credit-file-service
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: credit-file-service
+    spec:
+      serviceAccountName: credit-file-service
+      terminationGracePeriodSeconds: 45
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: credit-file-service
+          image: REGION-docker.pkg.dev/PROJECT_ID/ukcredit/credit-file-service-boot:TAG
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 9081
+          envFrom:
+            - configMapRef:
+                name: credit-file-service
+            - secretRef:
+                name: credit-file-service-db
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+            limits:
+              memory: 768Mi
+          startupProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: http
+            periodSeconds: 5
+            failureThreshold: 24
+          livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: http
+            periodSeconds: 10
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: http
+            periodSeconds: 5
+            failureThreshold: 3
+          lifecycle:
+            preStop:
+              exec:
+                command: ["sleep", "10"]
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+        # Optional: Cloud SQL Auth Proxy sidecar (Cloud SQL for PostgreSQL). Uncomment, set the instance
+        # connection name, keep DB_HOST=127.0.0.1 in the ConfigMap, and bind the KSA to a GSA with
+        # roles/cloudsql.client via Workload Identity.
+        # - name: cloud-sql-proxy
+        #   image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.14.1
+        #   args:
+        #     - "--private-ip"
+        #     - "--port=5432"
+        #     - "--health-check"
+        #     - "--http-address=0.0.0.0"
+        #     - "PROJECT_ID:REGION:INSTANCE"
+        #   securityContext:
+        #     runAsNonRoot: true
+        #     allowPrivilegeEscalation: false
+        #     readOnlyRootFilesystem: true
+        #   resources:
+        #     requests:
+        #       cpu: 50m
+        #       memory: 64Mi
+      volumes:
+        - name: tmp
+          emptyDir: {}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: credit-file-service
+  # annotations:
+  #   iam.gke.io/gcp-service-account: credit-file-service@PROJECT_ID.iam.gserviceaccount.com
