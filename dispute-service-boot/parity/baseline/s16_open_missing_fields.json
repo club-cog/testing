@@ -1,0 +1,17 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/disputes",
+    "body": {
+      "cnsmrId": 100012
+    },
+    "target": "dispute"
+  },
+  "status": 400,
+  "contentType": "application/json;charset=utf-8",
+  "json": {
+    "error": "cnsmrId, rsnCd and one of trdlnId/pubRecId are required"
+  },
+  "nonJsonBody": null,
+  "outbound": []
+}

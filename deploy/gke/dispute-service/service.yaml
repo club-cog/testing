@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dispute-service
+  labels:
+    app.kubernetes.io/name: dispute-service
+    app.kubernetes.io/part-of: uk-credit
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: dispute-service
+  ports:
+    - name: http
+      port: 9083
+      targetPort: http

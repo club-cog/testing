@@ -1,0 +1,18 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/disputes/40014/resolve",
+    "body": {
+      "outcome": "AMEND",
+      "operatorId": "OPS9999"
+    },
+    "target": "dispute"
+  },
+  "status": 400,
+  "contentType": "application/json;charset=utf-8",
+  "json": {
+    "error": "unknown operator OPS9999"
+  },
+  "nonJsonBody": null,
+  "outbound": []
+}

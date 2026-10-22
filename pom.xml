@@ -109,6 +109,19 @@
         </dependencies>
     </dependencyManagement>
 
+    <profiles>
+        <!-- Spring Boot 3 modules need JDK 21; the legacy modules still build on JDK 1.8 without them. -->
+        <profile>
+            <id>boot3</id>
+            <activation>
+                <jdk>[21,)</jdk>
+            </activation>
+            <modules>
+                <module>dispute-service-boot</module>
+            </modules>
+        </profile>
+    </profiles>
+
     <build>
         <pluginManagement>
             <plugins>

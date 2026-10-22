@@ -1,0 +1,68 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/disputes/40016/resolve",
+    "body": {
+      "outcome": "NOCHANGE",
+      "operatorId": "OPS0003"
+    },
+    "target": "dispute"
+  },
+  "status": 200,
+  "contentType": "application/json;charset=utf-8",
+  "json": {
+    "dsptId": 40016,
+    "cnsmrId": 100014,
+    "trdlnId": null,
+    "pubRecId": 1,
+    "rsnCd": "PAIDOFF",
+    "chnlCd": "PST",
+    "rcvdTs": "2025-01-02 09:00:00",
+    "slaDueDt": "2025-01-30",
+    "stsCd": "CLOSED",
+    "outcomeCd": "NOCHANGE",
+    "rslvdTs": "<now>",
+    "rslvdBy": "OPS0003",
+    "events": [
+      {
+        "evtId": 28,
+        "evtTypCd": "OPENED",
+        "evtTs": "<now>",
+        "oprId": null,
+        "note": "region=EW"
+      },
+      {
+        "evtId": 31,
+        "evtTypCd": "CLOSED",
+        "evtTs": "<now>",
+        "oprId": "OPS0003",
+        "note": "outcome=NOCHANGE"
+      }
+    ],
+    "correspondence": [
+      {
+        "tmplCd": "ACK01",
+        "sentTs": "<now>",
+        "chnlCd": "PST"
+      },
+      {
+        "tmplCd": "RES02",
+        "sentTs": "<now>",
+        "chnlCd": "PST"
+      }
+    ]
+  },
+  "nonJsonBody": null,
+  "outbound": [
+    {
+      "to": "score-service",
+      "method": "POST",
+      "path": "/score/100014/recalculate?trigger=DISPUTE_CLOSE",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "text/plain, application/json, application/*+json, */*"
+      },
+      "body": ""
+    }
+  ]
+}

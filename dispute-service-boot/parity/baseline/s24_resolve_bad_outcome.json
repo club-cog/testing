@@ -1,0 +1,18 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/disputes/40014/resolve",
+    "body": {
+      "outcome": "UPHELD",
+      "operatorId": "OPS0002"
+    },
+    "target": "dispute"
+  },
+  "status": 400,
+  "contentType": "application/json;charset=utf-8",
+  "json": {
+    "error": "outcome (AMEND|DELETE|NOCHANGE) and operatorId are required"
+  },
+  "nonJsonBody": null,
+  "outbound": []
+}

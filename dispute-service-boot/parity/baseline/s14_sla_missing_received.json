@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/disputes/sla",
+    "body": null,
+    "target": "dispute"
+  },
+  "status": 400,
+  "contentType": "text/html;charset=iso-8859-1",
+  "json": null,
+  "nonJsonBody": "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"/>\n<title>Error 400 Required String parameter &apos;received&apos; is not present</title>\n</head>\n<body><h2>HTTP ERROR 400 Required String parameter &apos;received&apos; is not present</h2>\n<table>\n<tr><th>URI:</th><td>/disputes/sla</td></tr>\n<tr><th>STATUS:</th><td>400</td></tr>\n<tr><th>MESSAGE:</th><td>Required String parameter &apos;received&apos; is not present</td></tr>\n<tr><th>SERVLET:</th><td>dispatcher</td></tr>\n</table>\n<hr/><a href=\"https://eclipse.org/jetty\">Powered by Jetty:// 9.4.53.v20231009</a><hr/>\n\n</body>\n</html>\n",
+  "outbound": []
+}

@@ -1,0 +1,54 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/disputes/40005",
+    "body": null,
+    "target": "dispute"
+  },
+  "status": 200,
+  "contentType": "application/json;charset=utf-8",
+  "json": {
+    "dsptId": 40005,
+    "cnsmrId": 100161,
+    "trdlnId": 7000490,
+    "pubRecId": null,
+    "rsnCd": "PAIDOFF",
+    "chnlCd": "WEB",
+    "rcvdTs": "2022-07-19 12:42:00",
+    "slaDueDt": "2022-08-16",
+    "stsCd": "CLOSED",
+    "outcomeCd": "NOCHANGE",
+    "rslvdTs": "2022-08-14 12:42:00",
+    "rslvdBy": "OPS0003",
+    "events": [
+      {
+        "evtId": 8,
+        "evtTypCd": "OPENED",
+        "evtTs": "2022-07-19 12:42:00",
+        "oprId": null,
+        "note": null
+      },
+      {
+        "evtId": 9,
+        "evtTypCd": "CLOSED",
+        "evtTs": "2022-08-14 12:42:00",
+        "oprId": "OPS0003",
+        "note": null
+      }
+    ],
+    "correspondence": [
+      {
+        "tmplCd": "ACK01",
+        "sentTs": "2022-07-19 14:42:00",
+        "chnlCd": "PST"
+      },
+      {
+        "tmplCd": "RES01",
+        "sentTs": "2022-08-14 13:42:00",
+        "chnlCd": "PST"
+      }
+    ]
+  },
+  "nonJsonBody": null,
+  "outbound": []
+}

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "SOAP",
+    "path": "/ws/TradelineMaintenance",
+    "body": 7000012,
+    "target": "creditfile"
+  },
+  "status": 200,
+  "contentType": "text/xml;charset=utf-8",
+  "json": null,
+  "nonJsonBody": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tl=\"urn:ukcredit:tradeline:v1\"><soapenv:Body><tl:GetTradelineResponse><tl:tradelineId>7000012</tl:tradelineId><tl:consumerId>100008</tl:consumerId><tl:statusCd>0</tl:statusCd><tl:balancePence>12000</tl:balancePence><tl:disputeFlag>N</tl:disputeFlag></tl:GetTradelineResponse></soapenv:Body></soapenv:Envelope>",
+  "outbound": []
+}

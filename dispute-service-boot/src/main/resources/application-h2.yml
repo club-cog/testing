@@ -1,0 +1,7 @@
+# Local: the shared H2 file written by scripts/db-reset.sh (run from the repo root).
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: ${DB_URL:jdbc:h2:file:${H2_PATH:./data/h2/ukcredit};MODE=PostgreSQL;AUTO_SERVER=TRUE}
+    username: ${DB_USER:ukcredit}
+    password: ${DB_PASSWORD:ukcredit}

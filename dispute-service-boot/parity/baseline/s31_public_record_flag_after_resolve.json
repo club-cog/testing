@@ -1,0 +1,80 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/creditfile/100014",
+    "body": null,
+    "target": "creditfile"
+  },
+  "status": 200,
+  "contentType": "application/json;charset=utf-8",
+  "json": {
+    "consumer": {
+      "cnsmrId": 100014,
+      "title": "MR",
+      "firstName": "Kevin",
+      "middleName": null,
+      "surname": "Doyle",
+      "dob": "1970-01-15",
+      "matchKey": "DOYLE|19700115|K"
+    },
+    "addresses": [
+      {
+        "addrHistId": 17,
+        "addrId": 500015,
+        "line1": "19 Church Lane",
+        "town": "Swansea",
+        "postcode": "SA1 2BX",
+        "from": "2015-02-01",
+        "to": null,
+        "source": "CAI"
+      }
+    ],
+    "tradelines": [
+      {
+        "trdlnId": 7000018,
+        "lender": "UTL112",
+        "lenderName": "Brightwater Energy",
+        "accountType": "UT",
+        "revolving": false,
+        "openDate": "2015-02-01",
+        "closeDate": null,
+        "creditLimit": null,
+        "balancePence": 21000,
+        "balanceDisplay": "210.00",
+        "statusCd": "3",
+        "statusDate": "2024-11-30",
+        "mappedStatus": "ARREARS_3",
+        "paymentProfile": "333000000000000000000000",
+        "disputed": false
+      }
+    ],
+    "publicRecords": [
+      {
+        "pubRecId": 1,
+        "type": "CCJ",
+        "court": "CCMC",
+        "caseRef": "K9QZ12A4",
+        "judgmentDate": "2021-08-10",
+        "amount": "1240.00",
+        "satisfiedDate": null,
+        "disputed": false
+      },
+      {
+        "pubRecId": 2,
+        "type": "CCJ",
+        "court": "CRDF",
+        "caseRef": "F2CF55B1",
+        "judgmentDate": "2019-02-01",
+        "amount": "560.00",
+        "satisfiedDate": "2019-05-01",
+        "disputed": false
+      }
+    ],
+    "searches": [],
+    "electoralRoll": [],
+    "aliases": [],
+    "notices": []
+  },
+  "nonJsonBody": null,
+  "outbound": []
+}
