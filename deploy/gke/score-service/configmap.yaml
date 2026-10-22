@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: score-service-config
+  labels:
+    app.kubernetes.io/name: score-service
+    app.kubernetes.io/part-of: uk-credit-platform
+data:
+  SPRING_PROFILES_ACTIVE: "postgres"
+  PORT: "9082"
+  # Cloud SQL via the Auth Proxy sidecar (localhost) or a private IP.
+  DB_URL: "jdbc:postgresql://127.0.0.1:5432/ukcredit"
+  DB_POOL_MAX: "10"
+  CREDITFILE_URL: "http://credit-file-service:8081"
+  CREDITFILE_TIMEOUT_MS: "5000"

@@ -1,0 +1,30 @@
+# Defaults run side by side with legacy score-service (8082) on the shared local H2 file.
+server:
+  port: ${PORT:9082}
+  shutdown: graceful
+
+spring:
+  application:
+    name: score-service-boot
+  profiles:
+    default: h2
+  datasource:
+    hikari:
+      maximum-pool-size: ${DB_POOL_MAX:10}
+
+creditfile:
+  url: ${CREDITFILE_URL:http://localhost:8081}
+  timeout-ms: ${CREDITFILE_TIMEOUT_MS:5000}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      group:
+        readiness:
+          include: readinessState,db

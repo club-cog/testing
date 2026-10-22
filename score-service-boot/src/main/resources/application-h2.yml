@@ -1,0 +1,7 @@
+# Local H2 file shared with the legacy services (PostgreSQL mode). Legacy -Djdbc.* flags still work.
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: ${DB_URL:${jdbc.url:jdbc:h2:file:./data/h2/ukcredit;MODE=PostgreSQL;AUTO_SERVER=TRUE}}
+    username: ${DB_USERNAME:${jdbc.username:ukcredit}}
+    password: ${DB_PASSWORD:${jdbc.password:ukcredit}}

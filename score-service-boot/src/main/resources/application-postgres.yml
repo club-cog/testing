@@ -1,0 +1,7 @@
+# PostgreSQL / Cloud SQL (via the Cloud SQL Auth Proxy on localhost, or a private IP).
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${DB_URL:${jdbc.url:jdbc:postgresql://localhost:5432/ukcredit}}
+    username: ${DB_USERNAME:${jdbc.username:ukcredit}}
+    password: ${DB_PASSWORD:${jdbc.password:ukcredit}}
