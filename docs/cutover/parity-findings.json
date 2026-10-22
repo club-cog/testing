@@ -1,0 +1,10 @@
+{
+  "_comment": "Root causes and approved intentional changes, keyed by check (Class.method) or consumer id. classification: INTENTIONAL CHANGE (needs Risk/Model Governance approval) or DIFFERED.",
+  "checks": {},
+  "consumers": {},
+  "notes": [
+    "Error bodies for requests that never reach a handler (`/score/abc` 400, malformed `asOf` 500, unknown path 404) become Boot's JSON error body instead of Jetty's HTML page; status codes unchanged. Declared intentional in the migration PR (docs/migrations/score-service-boot3.md); not exercised by this suite. Needs explicit Risk/Model Governance + Platform acceptance.",
+    "Default port 9082 instead of 8082 (GKE Service still exposes 8082). Run here on 8092 via `PORT`; no behavioural impact.",
+    "Open risk from the migration PR: `SCR_HIST_SEQ` is shared, so `SCORE_HISTORY` ids interleave while both versions take recalculations side by side. Values stay valid; ordering by id mixes writers."
+  ]
+}

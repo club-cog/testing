@@ -16,6 +16,7 @@
         <module>score-service</module>
         <module>dispute-service</module>
         <module>batch-ingest</module>
+        <module>characterization-tests</module>
     </modules>
 
     <properties>

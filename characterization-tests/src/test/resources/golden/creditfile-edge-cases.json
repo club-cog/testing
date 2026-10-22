@@ -1,0 +1,847 @@
+{
+  "meta" : {
+    "seed" : 20241231,
+    "reset" : "scripts/db-reset.sh",
+    "endpoint" : "GET /creditfile/{id}",
+    "count" : 16
+  },
+  "responses" : {
+    "100001" : {
+      "consumer" : {
+        "cnsmrId" : 100001,
+        "title" : "MR",
+        "firstName" : "Xander",
+        "middleName" : null,
+        "surname" : "Pryce",
+        "dob" : "1975-03-12",
+        "matchKey" : "PRYCE|19750312|X"
+      },
+      "addresses" : [ {
+        "addrHistId" : 1,
+        "addrId" : 500001,
+        "line1" : "14 Wellmeadow Road",
+        "town" : "Reading",
+        "postcode" : "RG1 4QT",
+        "from" : "2010-02-01",
+        "to" : null,
+        "source" : "ERL"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000002,
+        "lender" : "CCX301",
+        "lenderName" : "Pennant Credit (closed book)",
+        "accountType" : "CC",
+        "revolving" : true,
+        "openDate" : "2009-04-01",
+        "closeDate" : null,
+        "creditLimit" : 1500,
+        "balancePence" : 132000,
+        "balanceDisplay" : "1320.00",
+        "statusCd" : "X",
+        "statusDate" : "2013-11-15",
+        "mappedStatus" : "DEFAULT",
+        "paymentProfile" : "XXX000000000000000000000",
+        "disputed" : false
+      }, {
+        "trdlnId" : 7000001,
+        "lender" : "CCX220",
+        "lenderName" : "Kestrel Card Services",
+        "accountType" : "CC",
+        "revolving" : true,
+        "openDate" : "2011-05-01",
+        "closeDate" : null,
+        "creditLimit" : 2000,
+        "balancePence" : 45000,
+        "balanceDisplay" : "450.00",
+        "statusCd" : "0",
+        "statusDate" : "2024-11-30",
+        "mappedStatus" : "UP_TO_DATE",
+        "paymentProfile" : "000000000000000000000000",
+        "disputed" : false
+      } ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ {
+        "erId" : 1,
+        "addrId" : 500001,
+        "from" : "2010-02-01",
+        "to" : null
+      } ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    },
+    "100002" : {
+      "consumer" : {
+        "cnsmrId" : 100002,
+        "title" : "MS",
+        "firstName" : "Yasmin",
+        "middleName" : null,
+        "surname" : "Achterberg",
+        "dob" : "1981-07-30",
+        "matchKey" : "ACHTERBERG|19810730|Y"
+      },
+      "addresses" : [ {
+        "addrHistId" : 2,
+        "addrId" : 500002,
+        "line1" : "3 Orchard Close",
+        "town" : "Norwich",
+        "postcode" : "NR2 3HP",
+        "from" : "2014-09-01",
+        "to" : null,
+        "source" : "CAI"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000003,
+        "lender" : "RTL031",
+        "lenderName" : "Hollins & Pike Retail Finance",
+        "accountType" : "SC",
+        "revolving" : true,
+        "openDate" : "2015-03-01",
+        "closeDate" : null,
+        "creditLimit" : 800,
+        "balancePence" : 61000,
+        "balanceDisplay" : "610.00",
+        "statusCd" : "X",
+        "statusDate" : "2016-06-01",
+        "mappedStatus" : "ARRANGEMENT",
+        "paymentProfile" : "XXX000000000000000000000",
+        "disputed" : false
+      }, {
+        "trdlnId" : 7000004,
+        "lender" : "TEL009",
+        "lenderName" : "Northline Mobile",
+        "accountType" : "MO",
+        "revolving" : false,
+        "openDate" : "2019-01-10",
+        "closeDate" : null,
+        "creditLimit" : null,
+        "balancePence" : 2400,
+        "balanceDisplay" : "24.00",
+        "statusCd" : "0",
+        "statusDate" : "2024-11-30",
+        "mappedStatus" : "UP_TO_DATE",
+        "paymentProfile" : "000000000000000000000000",
+        "disputed" : false
+      } ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ {
+        "erId" : 2,
+        "addrId" : 500002,
+        "from" : "2015-01-01",
+        "to" : null
+      } ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    },
+    "100003" : {
+      "consumer" : {
+        "cnsmrId" : 100003,
+        "title" : "MR",
+        "firstName" : "Owen",
+        "middleName" : "Llyr",
+        "surname" : "Castellane",
+        "dob" : "1969-11-02",
+        "matchKey" : "CASTELLANE|19691102|O"
+      },
+      "addresses" : [ {
+        "addrHistId" : 3,
+        "addrId" : 500003,
+        "line1" : "88 Victoria Road",
+        "town" : "Cardiff",
+        "postcode" : "CF5 1JR",
+        "from" : "2005-06-01",
+        "to" : null,
+        "source" : "ERL"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000006,
+        "lender" : "UTL112",
+        "lenderName" : "Brightwater Energy",
+        "accountType" : "UT",
+        "revolving" : false,
+        "openDate" : "2010-09-01",
+        "closeDate" : null,
+        "creditLimit" : null,
+        "balancePence" : 9500,
+        "balanceDisplay" : "95.00",
+        "statusCd" : "X",
+        "statusDate" : "2014-04-01",
+        "mappedStatus" : "ARRANGEMENT",
+        "paymentProfile" : "XXX000000000000000000000",
+        "disputed" : false
+      }, {
+        "trdlnId" : 7000005,
+        "lender" : "TEL009",
+        "lenderName" : "Northline Mobile",
+        "accountType" : "MO",
+        "revolving" : false,
+        "openDate" : "2012-02-01",
+        "closeDate" : null,
+        "creditLimit" : null,
+        "balancePence" : 18000,
+        "balanceDisplay" : "180.00",
+        "statusCd" : "X",
+        "statusDate" : "2014-03-31",
+        "mappedStatus" : "DEFAULT",
+        "paymentProfile" : "XXX000000000000000000000",
+        "disputed" : false
+      } ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ {
+        "erId" : 3,
+        "addrId" : 500003,
+        "from" : "2005-06-01",
+        "to" : null
+      } ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    },
+    "100004" : {
+      "consumer" : {
+        "cnsmrId" : 100004,
+        "title" : "MRS",
+        "firstName" : "Priya",
+        "middleName" : null,
+        "surname" : "Kandasamy",
+        "dob" : "1988-01-19",
+        "matchKey" : "KANDASAMY|19880119|P"
+      },
+      "addresses" : [ {
+        "addrHistId" : 4,
+        "addrId" : 500004,
+        "line1" : "27 Kings Drive",
+        "town" : "Birmingham",
+        "postcode" : "B15 2TT",
+        "from" : "2012-04-01",
+        "to" : null,
+        "source" : "CAI"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000007,
+        "lender" : "CCX220",
+        "lenderName" : "Kestrel Card Services",
+        "accountType" : "CC",
+        "revolving" : true,
+        "openDate" : "2010-08-01",
+        "closeDate" : null,
+        "creditLimit" : 3000,
+        "balancePence" : 120000,
+        "balanceDisplay" : "1200.00",
+        "statusCd" : "X",
+        "statusDate" : "2014-06-01",
+        "mappedStatus" : "ARRANGEMENT",
+        "paymentProfile" : "XXX000000000000000000000",
+        "disputed" : false
+      } ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ {
+        "erId" : 4,
+        "addrId" : 500004,
+        "from" : "2012-04-01",
+        "to" : null
+      } ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    },
+    "100005" : {
+      "consumer" : {
+        "cnsmrId" : 100005,
+        "title" : "MR",
+        "firstName" : "Daniel",
+        "middleName" : null,
+        "surname" : "Okonkwo-Hart",
+        "dob" : "1979-05-05",
+        "matchKey" : "OKONKWOHART|19790505|D"
+      },
+      "addresses" : [ {
+        "addrHistId" : 5,
+        "addrId" : 500005,
+        "line1" : "5 Brook Street",
+        "town" : "Leeds",
+        "postcode" : "LS2 7EW",
+        "from" : "2016-03-01",
+        "to" : null,
+        "source" : "ERL"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000008,
+        "lender" : "CCX220",
+        "lenderName" : "Kestrel Card Services",
+        "accountType" : "CC",
+        "revolving" : true,
+        "openDate" : "2017-01-15",
+        "closeDate" : null,
+        "creditLimit" : 1000,
+        "balancePence" : 74950,
+        "balanceDisplay" : "749.50",
+        "statusCd" : "0",
+        "statusDate" : "2024-11-30",
+        "mappedStatus" : "UP_TO_DATE",
+        "paymentProfile" : "000000000000000000000000",
+        "disputed" : false
+      } ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ {
+        "erId" : 5,
+        "addrId" : 500005,
+        "from" : "2016-03-01",
+        "to" : null
+      } ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    },
+    "100006" : {
+      "consumer" : {
+        "cnsmrId" : 100006,
+        "title" : "MS",
+        "firstName" : "Harriet",
+        "middleName" : null,
+        "surname" : "Lindqvist",
+        "dob" : "1990-09-14",
+        "matchKey" : "LINDQVIST|19900914|H"
+      },
+      "addresses" : [ {
+        "addrHistId" : 6,
+        "addrId" : 500006,
+        "line1" : "41 Park Avenue",
+        "town" : "Bristol",
+        "postcode" : "BS8 1TH",
+        "from" : "2018-07-01",
+        "to" : null,
+        "source" : "CAI"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000009,
+        "lender" : "CCX220",
+        "lenderName" : "Kestrel Card Services",
+        "accountType" : "CC",
+        "revolving" : true,
+        "openDate" : "2018-09-01",
+        "closeDate" : null,
+        "creditLimit" : 500,
+        "balancePence" : 30050,
+        "balanceDisplay" : "300.50",
+        "statusCd" : "0",
+        "statusDate" : "2024-11-30",
+        "mappedStatus" : "UP_TO_DATE",
+        "paymentProfile" : "000000000000000000000000",
+        "disputed" : false
+      }, {
+        "trdlnId" : 7000010,
+        "lender" : "BKA001",
+        "lenderName" : "Albion Mutual Bank",
+        "accountType" : "CC",
+        "revolving" : true,
+        "openDate" : "2019-02-01",
+        "closeDate" : null,
+        "creditLimit" : 500,
+        "balancePence" : 44900,
+        "balanceDisplay" : "449.00",
+        "statusCd" : "0",
+        "statusDate" : "2024-11-30",
+        "mappedStatus" : "UP_TO_DATE",
+        "paymentProfile" : "000000000000000000000000",
+        "disputed" : false
+      } ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ {
+        "erId" : 6,
+        "addrId" : 500006,
+        "from" : "2018-07-01",
+        "to" : null
+      } ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    },
+    "100007" : {
+      "consumer" : {
+        "cnsmrId" : 100007,
+        "title" : "MR",
+        "firstName" : "Tomasz",
+        "middleName" : null,
+        "surname" : "Brennan",
+        "dob" : "1972-12-01",
+        "matchKey" : "BRENNAN|19721201|T"
+      },
+      "addresses" : [ {
+        "addrHistId" : 7,
+        "addrId" : 500007,
+        "line1" : "9 Mill Lane",
+        "town" : "Exeter",
+        "postcode" : "EX4 4QJ",
+        "from" : "2009-01-01",
+        "to" : null,
+        "source" : "ERL"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000011,
+        "lender" : "CCX220",
+        "lenderName" : "Kestrel Card Services",
+        "accountType" : "CC",
+        "revolving" : true,
+        "openDate" : "2013-06-01",
+        "closeDate" : null,
+        "creditLimit" : 1002,
+        "balancePence" : 50050,
+        "balanceDisplay" : "500.50",
+        "statusCd" : "0",
+        "statusDate" : "2024-11-30",
+        "mappedStatus" : "UP_TO_DATE",
+        "paymentProfile" : "000000000000000000000000",
+        "disputed" : false
+      } ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ {
+        "erId" : 7,
+        "addrId" : 500007,
+        "from" : "2009-01-01",
+        "to" : null
+      } ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    },
+    "100008" : {
+      "consumer" : {
+        "cnsmrId" : 100008,
+        "title" : "MS",
+        "firstName" : "Siobhán",
+        "middleName" : null,
+        "surname" : "Ó Briain",
+        "dob" : "1984-02-29",
+        "matchKey" : "OBRIAIN|19840229|S"
+      },
+      "addresses" : [ {
+        "addrHistId" : 8,
+        "addrId" : 500008,
+        "line1" : "12 Chapel Row",
+        "town" : "Belfast",
+        "postcode" : "BT7 1NN",
+        "from" : "2017-10-01",
+        "to" : null,
+        "source" : "ERL"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000012,
+        "lender" : "BKB014",
+        "lenderName" : "Thamesgate Building Society",
+        "accountType" : "CA",
+        "revolving" : true,
+        "openDate" : "2017-11-01",
+        "closeDate" : null,
+        "creditLimit" : 500,
+        "balancePence" : 12000,
+        "balanceDisplay" : "120.00",
+        "statusCd" : "0",
+        "statusDate" : "2024-11-30",
+        "mappedStatus" : "UP_TO_DATE",
+        "paymentProfile" : "000000000000000000000000",
+        "disputed" : false
+      } ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ {
+        "erId" : 8,
+        "addrId" : 500008,
+        "from" : "2017-10-01",
+        "to" : null
+      } ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    },
+    "100009" : {
+      "consumer" : {
+        "cnsmrId" : 100009,
+        "title" : "MRS",
+        "firstName" : "Renée",
+        "middleName" : null,
+        "surname" : "Dubois-Marchand",
+        "dob" : "1966-04-21",
+        "matchKey" : "DUBOISMARCHAND|19660421|R"
+      },
+      "addresses" : [ {
+        "addrHistId" : 9,
+        "addrId" : 500009,
+        "line1" : "70 Queens Road",
+        "town" : "Brighton",
+        "postcode" : "BN1 3XE",
+        "from" : "2003-05-01",
+        "to" : null,
+        "source" : "ERL"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000013,
+        "lender" : "MTG005",
+        "lenderName" : "Caledon Home Loans",
+        "accountType" : "MG",
+        "revolving" : false,
+        "openDate" : "2003-05-01",
+        "closeDate" : null,
+        "creditLimit" : null,
+        "balancePence" : 8650000,
+        "balanceDisplay" : "86500.00",
+        "statusCd" : "0",
+        "statusDate" : "2024-11-30",
+        "mappedStatus" : "UP_TO_DATE",
+        "paymentProfile" : "000000000000000000000000",
+        "disputed" : false
+      } ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ {
+        "erId" : 9,
+        "addrId" : 500009,
+        "from" : "2003-05-01",
+        "to" : null
+      } ],
+      "aliases" : [ {
+        "firstName" : "Renée",
+        "surname" : "Dubois",
+        "type" : "MN"
+      } ],
+      "notices" : [ ]
+    },
+    "100010" : {
+      "consumer" : {
+        "cnsmrId" : 100010,
+        "title" : "MR",
+        "firstName" : "Łukasz",
+        "middleName" : null,
+        "surname" : "Wiśniewski",
+        "dob" : "1992-08-08",
+        "matchKey" : "WISNIEWSKI|19920808|L"
+      },
+      "addresses" : [ {
+        "addrHistId" : 10,
+        "addrId" : 500010,
+        "line1" : "101 Station Road",
+        "town" : "Manchester",
+        "postcode" : "M14 5RQ",
+        "from" : "2020-01-15",
+        "to" : null,
+        "source" : "CAI"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000014,
+        "lender" : "TEL009",
+        "lenderName" : "Northline Mobile",
+        "accountType" : "MO",
+        "revolving" : false,
+        "openDate" : "2020-02-01",
+        "closeDate" : null,
+        "creditLimit" : null,
+        "balancePence" : 3500,
+        "balanceDisplay" : "35.00",
+        "statusCd" : "0",
+        "statusDate" : "2024-11-30",
+        "mappedStatus" : "UP_TO_DATE",
+        "paymentProfile" : "000000000000000000000000",
+        "disputed" : false
+      } ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    },
+    "100011" : {
+      "consumer" : {
+        "cnsmrId" : 100011,
+        "title" : "MRS",
+        "firstName" : "Margaret",
+        "middleName" : "Anne",
+        "surname" : "Strauß",
+        "dob" : "1958-10-10",
+        "matchKey" : "STRAUSS|19581010|M"
+      },
+      "addresses" : [ {
+        "addrHistId" : 13,
+        "addrId" : 500011,
+        "line1" : "12 Elm Grove",
+        "town" : "Leeds",
+        "postcode" : "LS6 2AB",
+        "from" : "2019-05-01",
+        "to" : null,
+        "source" : "ERL"
+      }, {
+        "addrHistId" : 11,
+        "addrId" : 500012,
+        "line1" : "4 Albert Terrace",
+        "town" : "Leeds",
+        "postcode" : "LS4 2HR",
+        "from" : "2012-08-01",
+        "to" : "2019-04-30",
+        "source" : "CAI"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000015,
+        "lender" : "BKB014",
+        "lenderName" : "Thamesgate Building Society",
+        "accountType" : "CA",
+        "revolving" : true,
+        "openDate" : "1990-04-01",
+        "closeDate" : null,
+        "creditLimit" : 250,
+        "balancePence" : 0,
+        "balanceDisplay" : "0.00",
+        "statusCd" : "0",
+        "statusDate" : "2024-11-30",
+        "mappedStatus" : "UP_TO_DATE",
+        "paymentProfile" : "000000000000000000000000",
+        "disputed" : false
+      } ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ {
+        "erId" : 10,
+        "addrId" : 500011,
+        "from" : "2019-05-01",
+        "to" : null
+      } ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    },
+    "100012" : {
+      "consumer" : {
+        "cnsmrId" : 100012,
+        "title" : "MR",
+        "firstName" : "Callum",
+        "middleName" : null,
+        "surname" : "MacLeod",
+        "dob" : "1983-03-03",
+        "matchKey" : "MACLEOD|19830303|C"
+      },
+      "addresses" : [ {
+        "addrHistId" : 15,
+        "addrId" : 500013,
+        "line1" : "22 The Crescent",
+        "town" : "Edinburgh",
+        "postcode" : "EH3 9QG",
+        "from" : "2011-08-01",
+        "to" : null,
+        "source" : "ERL"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000016,
+        "lender" : "CCX220",
+        "lenderName" : "Kestrel Card Services",
+        "accountType" : "CC",
+        "revolving" : true,
+        "openDate" : "2012-01-01",
+        "closeDate" : null,
+        "creditLimit" : 5000,
+        "balancePence" : 64000,
+        "balanceDisplay" : "640.00",
+        "statusCd" : "1",
+        "statusDate" : "2024-11-30",
+        "mappedStatus" : "ARREARS_1",
+        "paymentProfile" : "111000000000000000000000",
+        "disputed" : false
+      } ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ {
+        "erId" : 11,
+        "addrId" : 500013,
+        "from" : "2011-08-01",
+        "to" : null
+      } ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    },
+    "100013" : {
+      "consumer" : {
+        "cnsmrId" : 100013,
+        "title" : "MS",
+        "firstName" : "Grace",
+        "middleName" : null,
+        "surname" : "Whitfield",
+        "dob" : "1995-06-25",
+        "matchKey" : "WHITFIELD|19950625|G"
+      },
+      "addresses" : [ {
+        "addrHistId" : 16,
+        "addrId" : 500014,
+        "line1" : "6 Meadow View",
+        "town" : "Bristol",
+        "postcode" : "BS1 5TR",
+        "from" : "2021-09-01",
+        "to" : null,
+        "source" : "CAI"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000017,
+        "lender" : "RTL031",
+        "lenderName" : "Hollins & Pike Retail Finance",
+        "accountType" : "SC",
+        "revolving" : true,
+        "openDate" : "2022-03-01",
+        "closeDate" : null,
+        "creditLimit" : 1200,
+        "balancePence" : 30000,
+        "balanceDisplay" : "300.00",
+        "statusCd" : "0",
+        "statusDate" : "2024-11-30",
+        "mappedStatus" : "UP_TO_DATE",
+        "paymentProfile" : "000000000000000000000000",
+        "disputed" : false
+      } ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ {
+        "erId" : 12,
+        "addrId" : 500014,
+        "from" : "2021-09-01",
+        "to" : null
+      } ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    },
+    "100014" : {
+      "consumer" : {
+        "cnsmrId" : 100014,
+        "title" : "MR",
+        "firstName" : "Kevin",
+        "middleName" : null,
+        "surname" : "Doyle",
+        "dob" : "1970-01-15",
+        "matchKey" : "DOYLE|19700115|K"
+      },
+      "addresses" : [ {
+        "addrHistId" : 17,
+        "addrId" : 500015,
+        "line1" : "19 Church Lane",
+        "town" : "Swansea",
+        "postcode" : "SA1 2BX",
+        "from" : "2015-02-01",
+        "to" : null,
+        "source" : "CAI"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000018,
+        "lender" : "UTL112",
+        "lenderName" : "Brightwater Energy",
+        "accountType" : "UT",
+        "revolving" : false,
+        "openDate" : "2015-02-01",
+        "closeDate" : null,
+        "creditLimit" : null,
+        "balancePence" : 21000,
+        "balanceDisplay" : "210.00",
+        "statusCd" : "3",
+        "statusDate" : "2024-11-30",
+        "mappedStatus" : "ARREARS_3",
+        "paymentProfile" : "333000000000000000000000",
+        "disputed" : false
+      } ],
+      "publicRecords" : [ {
+        "pubRecId" : 1,
+        "type" : "CCJ",
+        "court" : "CCMC",
+        "caseRef" : "K9QZ12A4",
+        "judgmentDate" : "2021-08-10",
+        "amount" : "1240.00",
+        "satisfiedDate" : null,
+        "disputed" : false
+      }, {
+        "pubRecId" : 2,
+        "type" : "CCJ",
+        "court" : "CRDF",
+        "caseRef" : "F2CF55B1",
+        "judgmentDate" : "2019-02-01",
+        "amount" : "560.00",
+        "satisfiedDate" : "2019-05-01",
+        "disputed" : false
+      } ],
+      "searches" : [ ],
+      "electoralRoll" : [ ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    },
+    "100015" : {
+      "consumer" : {
+        "cnsmrId" : 100015,
+        "title" : "MISS",
+        "firstName" : "Amelia",
+        "middleName" : null,
+        "surname" : "Hart",
+        "dob" : "2003-10-10",
+        "matchKey" : "HART|20031010|A"
+      },
+      "addresses" : [ {
+        "addrHistId" : 18,
+        "addrId" : 500016,
+        "line1" : "2 Orchard Close",
+        "town" : "Exeter",
+        "postcode" : "EX2 8LB",
+        "from" : "2022-09-01",
+        "to" : null,
+        "source" : "ERL"
+      } ],
+      "tradelines" : [ ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ {
+        "erId" : 13,
+        "addrId" : 500016,
+        "from" : "2022-09-01",
+        "to" : null
+      } ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    },
+    "100016" : {
+      "consumer" : {
+        "cnsmrId" : 100016,
+        "title" : "MR",
+        "firstName" : "Rajesh",
+        "middleName" : null,
+        "surname" : "Menon",
+        "dob" : "1977-02-14",
+        "matchKey" : "MENON|19770214|R"
+      },
+      "addresses" : [ {
+        "addrHistId" : 19,
+        "addrId" : 500017,
+        "line1" : "55 High Street",
+        "town" : "Reading",
+        "postcode" : "RG4 8AA",
+        "from" : "2013-03-01",
+        "to" : null,
+        "source" : "ERL"
+      } ],
+      "tradelines" : [ {
+        "trdlnId" : 7000019,
+        "lender" : "BKA001",
+        "lenderName" : "Albion Mutual Bank",
+        "accountType" : "CC",
+        "revolving" : true,
+        "openDate" : "2014-07-01",
+        "closeDate" : null,
+        "creditLimit" : 4000,
+        "balancePence" : 250000,
+        "balanceDisplay" : "2500.00",
+        "statusCd" : "2",
+        "statusDate" : "2024-11-30",
+        "mappedStatus" : "ARREARS_2",
+        "paymentProfile" : "222000000000000000000000",
+        "disputed" : true
+      } ],
+      "publicRecords" : [ ],
+      "searches" : [ ],
+      "electoralRoll" : [ {
+        "erId" : 14,
+        "addrId" : 500017,
+        "from" : "2013-03-01",
+        "to" : null
+      } ],
+      "aliases" : [ ],
+      "notices" : [ ]
+    }
+  }
+}
