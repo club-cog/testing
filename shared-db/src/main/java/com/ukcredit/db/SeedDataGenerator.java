@@ -448,7 +448,10 @@ public class SeedDataGenerator {
     // ------------------------------------------------------------------ sample nightly lender file
 
     void writeSampleFile(File f) throws Exception {
-        f.getParentFile().mkdirs();
+        File dir = f.getAbsoluteFile().getParentFile();
+        if (dir != null) {
+            dir.mkdirs();
+        }
         // lender files are ISO-8859-1, not UTF-8
         Writer w = new OutputStreamWriter(new FileOutputStream(f), Charset.forName("ISO-8859-1"));
         try {

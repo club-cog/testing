@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <import resource="classpath:META-INF/spring/shared-datasource.xml"/>
+
+    <mvc:annotation-driven/>
+    <context:component-scan base-package="com.ukcredit.dispute.web"/>
+
+    <bean id="disputeDao" class="com.ukcredit.dispute.dao.DisputeDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+
+    <bean id="workingDayCalendar" class="com.ukcredit.dispute.sla.WorkingDayCalendar">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+    <bean id="slaCalculator" class="com.ukcredit.dispute.sla.SlaCalculator">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+        <property name="workingDayCalendar" ref="workingDayCalendar"/>
+    </bean>
+    <bean id="regionResolver" class="com.ukcredit.dispute.sla.RegionResolver">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+
+    <!-- -Dcreditfile.url=... / -Dscore.url=... override these -->
+    <bean id="tradelineMaintenanceClient" class="com.ukcredit.dispute.client.TradelineMaintenanceClient">
+        <property name="baseUrl" value="http://localhost:8081"/>
+        <property name="timeoutMs" value="5000"/>
+    </bean>
+    <bean id="scoreClient" class="com.ukcredit.dispute.client.ScoreClient">
+        <property name="baseUrl" value="http://localhost:8082"/>
+        <property name="timeoutMs" value="10000"/>
+    </bean>
+
+    <bean id="disputeService" class="com.ukcredit.dispute.service.DisputeService">
+        <property name="disputeDao" ref="disputeDao"/>
+        <property name="slaCalculator" ref="slaCalculator"/>
+        <property name="regionResolver" ref="regionResolver"/>
+        <property name="tradelineClient" ref="tradelineMaintenanceClient"/>
+        <property name="scoreClient" ref="scoreClient"/>
+    </bean>
+</beans>
