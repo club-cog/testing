@@ -178,7 +178,7 @@ kubectl apply -k deploy/gke/credit-file-service/
 - Pod: non-root, read-only root filesystem, all capabilities dropped, seccomp `RuntimeDefault`, `/tmp` on an emptyDir.
   Requests 250m CPU / 512Mi, limit 768Mi. The JVM uses `MaxRAMPercentage=75`.
 - Probes: startup + liveness `/actuator/health/liveness`, readiness `/actuator/health/readiness` (includes DB). Graceful shutdown plus a 10 s preStop.
-- HPA: 2–6 replicas at 70% CPU. Rolling update with `maxUnavailable: 0`.
+- HPA: 2 to 6 replicas at 70% CPU. Rolling update with `maxUnavailable: 0`.
 - Cloud SQL: uncomment the `cloud-sql-proxy` sidecar, set `PROJECT_ID:REGION:INSTANCE`, keep `DB_HOST=127.0.0.1`,
   and bind the KSA to a GSA with `roles/cloudsql.client` (Workload Identity annotation in `deployment.yaml`).
   Without the proxy, set `DB_HOST` to the instance private IP.
