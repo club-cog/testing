@@ -1,0 +1,9 @@
+target/
+data/h2/
+data/outbound/
+*.log
+.idea/
+*.iml
+.classpath
+.project
+.settings/

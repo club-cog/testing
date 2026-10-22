@@ -1,0 +1,22 @@
+-- 2012-11: Prospect marketing preferences (CreditView Marketing product)
+CREATE TABLE CONSUMER_MARKETING_PREF (
+    CNSMR_ID        BIGINT       NOT NULL,
+    CHNL_CD         CHAR(3)      NOT NULL,
+    OPT_IN_FLG      CHAR(1)      NOT NULL,
+    CAPTR_DT        DATE         NOT NULL,
+    SRC_CMPGN_CD    VARCHAR(12),
+    CONSTRAINT PK_CONSUMER_MARKETING_PREF PRIMARY KEY (CNSMR_ID, CHNL_CD),
+    CONSTRAINT FK_MKTG_CNSMR FOREIGN KEY (CNSMR_ID) REFERENCES CONSUMER (CNSMR_ID)
+);
+
+-- 2012-12: copy of ACCOUNT_TRADELINE taken before the CAIS 2013 re-key. Keep until audit sign-off.
+CREATE TABLE TRADELINE_ARCHIVE_2012 (
+    TRDLN_ID        BIGINT       NOT NULL,
+    CNSMR_ID        BIGINT,
+    LNDR_ID         INTEGER,
+    ACCT_NO         VARCHAR(30),
+    ACCT_STS        CHAR(1),
+    BAL_AMT         NUMERIC(12,2),
+    ARCH_TS         TIMESTAMP,
+    CONSTRAINT PK_TRADELINE_ARCHIVE_2012 PRIMARY KEY (TRDLN_ID)
+);

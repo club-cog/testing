@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <import resource="classpath:META-INF/spring/shared-datasource.xml"/>
+    <import resource="classpath:META-INF/spring/creditfile-rules.xml"/>
+
+    <mvc:annotation-driven/>
+    <context:component-scan base-package="com.ukcredit.creditfile.web"/>
+
+    <bean id="consumerDao" class="com.ukcredit.creditfile.dao.ConsumerDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+    <bean id="tradelineDao" class="com.ukcredit.creditfile.dao.TradelineDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+    <bean id="addressHistoryDao" class="com.ukcredit.creditfile.dao.AddressHistoryDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+
+    <bean id="creditFileAssembler" class="com.ukcredit.creditfile.service.CreditFileAssembler">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+        <property name="consumerDao" ref="consumerDao"/>
+        <property name="tradelineDao" ref="tradelineDao"/>
+        <property name="addressHistoryDao" ref="addressHistoryDao"/>
+        <property name="statusMapper" ref="tradelineStatusMapper"/>
+        <property name="addressMerger" ref="addressHistoryMerger"/>
+    </bean>
+
+    <bean id="consumerMatchService" class="com.ukcredit.creditfile.service.ConsumerMatchService">
+        <property name="consumerDao" ref="consumerDao"/>
+        <property name="nameMatcher" ref="nameMatcher"/>
+    </bean>
+
+    <bean id="tradelineMaintenanceService" class="com.ukcredit.creditfile.service.TradelineMaintenanceService">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+        <property name="tradelineDao" ref="tradelineDao"/>
+    </bean>
+</beans>
