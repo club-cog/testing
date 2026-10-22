@@ -1,0 +1,184 @@
+name: characterization
+
+on:
+  pull_request:
+    branches: [uk-credit-legacy]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  targets:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.detect.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: detect
+        run: |
+          if [ -d score-service-boot ]; then
+            echo 'matrix=["legacy","boot"]' >> "$GITHUB_OUTPUT"
+          else
+            echo 'matrix=["legacy"]' >> "$GITHUB_OUTPUT"
+          fi
+
+  suite:
+    needs: targets
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        target: ${{ fromJSON(needs.targets.outputs.matrix) }}
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_DB: ukcredit
+          POSTGRES_USER: ukcredit
+          POSTGRES_PASSWORD: ukcredit
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U ukcredit" --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      BOOT_PORT: "8092"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Java 21 (score-service-boot)
+        if: matrix.target == 'boot'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Set up Java 8 (legacy estate)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "8"
+          cache: maven
+
+      - name: Build legacy estate
+        run: |
+          if grep -q '<module>score-service-boot</module>' pom.xml; then
+            mvn -B clean install -pl '!score-service-boot'
+          else
+            scripts/build.sh
+          fi
+
+      - name: Build score-service-boot
+        if: matrix.target == 'boot'
+        working-directory: score-service-boot
+        env:
+          JAVA_HOME: ${{ env.JAVA_HOME_21_X64 }}
+        run: |
+          if [ -x ./mvnw ]; then ./mvnw -B package -DskipTests; else mvn -B package -DskipTests; fi
+
+      - name: db-reset
+        run: . scripts/env-postgres.sh && scripts/db-reset.sh
+
+      - name: run-all
+        run: |
+          . scripts/env-postgres.sh
+          # in the boot leg dispute-service recalculates scores via the Boot service
+          if [ "${{ matrix.target }}" = boot ]; then export SVC_OPTS="-Dscore.url=http://localhost:$BOOT_PORT"; fi
+          scripts/run-all.sh
+          for p in 8081 8082 8083; do
+            timeout 120 sh -c "until curl -s -o /dev/null http://localhost:$p/; do sleep 2; done" || { cat data/logs/*.log; exit 1; }
+          done
+
+      - name: Start score-service-boot
+        if: matrix.target == 'boot'
+        env:
+          JAVA_HOME: ${{ env.JAVA_HOME_21_X64 }}
+          SERVER_PORT: ${{ env.BOOT_PORT }}
+          SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/ukcredit
+          SPRING_DATASOURCE_USERNAME: ukcredit
+          SPRING_DATASOURCE_PASSWORD: ukcredit
+          CREDITFILE_URL: http://localhost:8081
+        run: |
+          JAR=$(ls score-service-boot/target/*.jar | grep -v -e plain -e original | head -1)
+          nohup "$JAVA_HOME/bin/java" -Dserver.port=$BOOT_PORT -Dcreditfile.url=$CREDITFILE_URL -jar "$JAR" \
+            > data/logs/score-service-boot.log 2>&1 &
+          timeout 180 sh -c "until curl -s -o /dev/null http://localhost:$BOOT_PORT/score/100001?asOf=2024-12-31; do sleep 2; done" \
+            || { cat data/logs/score-service-boot.log; exit 1; }
+
+      - name: Characterization suite (legacy, full)
+        if: matrix.target == 'legacy'
+        run: mvn -B -pl characterization-tests test -Dcharacterization=true -Dsuite.target=legacy
+
+      - name: Characterization suite (legacy re-run, score checks; baseline)
+        if: matrix.target == 'legacy'
+        run: |
+          mv characterization-tests/target/surefire-reports results-legacy-surefire
+          mv characterization-tests/target/characterization results-legacy-characterization
+          mvn -B -pl characterization-tests test -Dcharacterization=true -Dsuite.target=legacy \
+            -Dgroups=com.ukcredit.characterization.ScoreApi
+          mkdir -p runs/baseline runs/legacy
+          mv characterization-tests/target/surefire-reports characterization-tests/target/characterization runs/baseline/
+          mv results-legacy-surefire runs/legacy/surefire-reports
+          mv results-legacy-characterization runs/legacy/characterization
+
+      - name: Characterization suite (boot, score checks)
+        if: matrix.target == 'boot'
+        run: |
+          mvn -B -pl characterization-tests test -Dcharacterization=true -Dsuite.target=boot \
+            -Dscore.url=http://localhost:$BOOT_PORT -Dgroups=com.ukcredit.characterization.ScoreApi
+          mkdir -p runs/boot
+          mv characterization-tests/target/surefire-reports characterization-tests/target/characterization runs/boot/
+
+      - name: Collect boot results despite failures
+        if: failure() && matrix.target == 'boot'
+        run: |
+          mkdir -p runs/boot
+          [ -d characterization-tests/target/surefire-reports ] && mv characterization-tests/target/surefire-reports runs/boot/ || true
+          [ -d characterization-tests/target/characterization ] && mv characterization-tests/target/characterization runs/boot/ || true
+
+      - name: Service logs
+        if: always()
+        run: tail -n 100 data/logs/*.log || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: surefire-${{ matrix.target }}
+          path: |
+            runs/
+            characterization-tests/target/surefire-reports/
+            data/logs/*.log
+          if-no-files-found: warn
+
+  parity-report:
+    needs: suite
+    if: always() && needs.suite.result != 'skipped'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: surefire-*
+          merge-multiple: true
+      - name: Generate parity report
+        run: |
+          if [ -d runs/boot ]; then CAND=runs/boot; LABEL=boot; else CAND=runs/baseline; LABEL=legacy; fi
+          set +e
+          python3 characterization-tests/parity/parity_report.py \
+            --legacy runs/legacy --candidate "$CAND" --candidate-label "$LABEL" \
+            --findings docs/cutover/parity-findings.json \
+            --meta "run=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            --meta "legacy_rev=${{ github.event.pull_request.base.sha || github.sha }}" \
+            --meta "candidate_rev=${{ github.event.pull_request.head.sha || github.sha }}" \
+            --meta "suite_rev=${{ github.event.pull_request.head.sha || github.sha }}" \
+            --meta "jdk=legacy: Temurin 8; boot: Temurin 21" \
+            --meta "candidate_url=$([ "$LABEL" = boot ] && echo http://localhost:8092 || echo http://localhost:8082)" \
+            --out parity/score-service-parity-report.md > parity/summary.md
+          rc=$?
+          set -e
+          { echo "## score-service parity ($LABEL)"; cat parity/summary.md; } >> "$GITHUB_STEP_SUMMARY"
+          exit $rc
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: parity-report
+          path: parity/

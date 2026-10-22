@@ -1,0 +1,5 @@
+{
+  "_comment": "Root causes and approved intentional changes, keyed by check (Class.method) or consumer id. classification: INTENTIONAL CHANGE (needs Risk/Model Governance approval) or DIFFERED.",
+  "checks": {},
+  "consumers": {}
+}
