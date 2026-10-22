@@ -190,6 +190,12 @@ def main():
             w("|---|---|---|---|")
             for cid, cls, cause, d in consumer_rows:
                 w("| %s | %s | %s | %s |" % (cid, cls, one_line("; ".join(d), 300), one_line(cause, 300)))
+    if findings.get("notes"):
+        w("")
+        w("### Declared changes and risks outside the suite")
+        w("")
+        for n in findings["notes"]:
+            w("- " + n)
     w("")
     w("## Recommendation")
     w("")

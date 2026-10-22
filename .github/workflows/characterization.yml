@@ -60,12 +60,8 @@ jobs:
           cache: maven
 
       - name: Build legacy estate
-        run: |
-          if grep -q '<module>score-service-boot</module>' pom.xml; then
-            mvn -B clean install -pl '!score-service-boot'
-          else
-            scripts/build.sh
-          fi
+        # on JDK 8 the root pom's boot3 profile (JDK 21+) leaves score-service-boot out of the reactor
+        run: scripts/build.sh
 
       - name: Build score-service-boot
         if: matrix.target == 'boot'
@@ -92,14 +88,15 @@ jobs:
         if: matrix.target == 'boot'
         env:
           JAVA_HOME: ${{ env.JAVA_HOME_21_X64 }}
-          SERVER_PORT: ${{ env.BOOT_PORT }}
-          SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/ukcredit
-          SPRING_DATASOURCE_USERNAME: ukcredit
-          SPRING_DATASOURCE_PASSWORD: ukcredit
+          PORT: ${{ env.BOOT_PORT }}
+          SPRING_PROFILES_ACTIVE: postgres
+          DB_URL: jdbc:postgresql://localhost:5432/ukcredit
+          DB_USERNAME: ukcredit
+          DB_PASSWORD: ukcredit
           CREDITFILE_URL: http://localhost:8081
         run: |
           JAR=$(ls score-service-boot/target/*.jar | grep -v -e plain -e original | head -1)
-          nohup "$JAVA_HOME/bin/java" -Dserver.port=$BOOT_PORT -Dcreditfile.url=$CREDITFILE_URL -jar "$JAR" \
+          nohup "$JAVA_HOME/bin/java" -jar "$JAR" \
             > data/logs/score-service-boot.log 2>&1 &
           timeout 180 sh -c "until curl -s -o /dev/null http://localhost:$BOOT_PORT/score/100001?asOf=2024-12-31; do sleep 2; done" \
             || { cat data/logs/score-service-boot.log; exit 1; }
