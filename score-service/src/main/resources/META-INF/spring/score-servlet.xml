@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <import resource="classpath:META-INF/spring/shared-datasource.xml"/>
+
+    <mvc:annotation-driven/>
+    <context:component-scan base-package="com.ukcredit.score.web"/>
+
+    <!-- credit file is fetched over HTTP from credit-file-service (-Dcreditfile.url=... to override) -->
+    <bean id="creditFileClient" class="com.ukcredit.score.client.CreditFileClient">
+        <property name="baseUrl" value="http://localhost:8081"/>
+        <property name="timeoutMs" value="5000"/>
+    </bean>
+
+    <bean id="scoreModelDao" class="com.ukcredit.score.dao.ScoreModelDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+    <bean id="scoreHistoryDao" class="com.ukcredit.score.dao.ScoreHistoryDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+
+    <bean id="legacyStatusTranslator" class="com.ukcredit.score.calc.LegacyStatusTranslator"/>
+
+    <bean id="scoreCalculator" class="com.ukcredit.score.calc.ScoreCalculator">
+        <property name="statusTranslator" ref="legacyStatusTranslator"/>
+    </bean>
+
+    <bean id="scoreService" class="com.ukcredit.score.calc.ScoreService">
+        <property name="creditFileClient" ref="creditFileClient"/>
+        <property name="scoreModelDao" ref="scoreModelDao"/>
+        <property name="scoreHistoryDao" ref="scoreHistoryDao"/>
+        <property name="scoreCalculator" ref="scoreCalculator"/>
+    </bean>
+</beans>
