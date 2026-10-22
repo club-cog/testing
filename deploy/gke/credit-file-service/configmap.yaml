@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: credit-file-service
+  labels:
+    app: credit-file-service
+data:
+  SPRING_PROFILES_ACTIVE: postgres
+  PORT: "9081"
+  # 127.0.0.1 when the Cloud SQL Auth Proxy sidecar is enabled; otherwise the database private IP.
+  DB_HOST: "127.0.0.1"
+  DB_PORT: "5432"
+  DB_NAME: ukcredit
+  DB_POOL_MAX: "10"
