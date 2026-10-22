@@ -161,6 +161,7 @@ jobs:
           merge-multiple: true
       - name: Generate parity report
         run: |
+          mkdir -p parity
           if [ -d runs/boot ]; then CAND=runs/boot; LABEL=boot; else CAND=runs/baseline; LABEL=legacy; fi
           set +e
           python3 characterization-tests/parity/parity_report.py \
